@@ -1,7 +1,8 @@
-table, td {
-   
-   
-}
+ table td
+    {
+    
+    }
+
 body{
   font-size: 12px;
   padding-top: 60px;
@@ -40,4 +41,7 @@ body{
 .protesta{
    font-size: 9px;
    line-height: 200%;
+}
+.indent {
+    margin-left: 50px;
 }

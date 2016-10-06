@@ -32,5 +32,12 @@
     <script src="{{ asset('plugins/datepicker/js/ui.datepicker-es-MX.js') }}"></script>
     <script src="{{ asset('plugins/bootstrap/js/bootstrap.js') }}"></script>
 
+    <script type="text/javascript">
+      var divWidth = 66*0.4;
+      document.getElementById("myRow").setAttribute('width', divWidth);//defaults to pixels
+      //or if you really want this as a percentage
+      document.getElementById("myRow").setAttribute('width', divWidth+'%');//percent
+    </script>
+
 </body>
 </html>

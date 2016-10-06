@@ -4,10 +4,10 @@
 
 @section('content')
 
-<table border="0" cellpadding="12" cellspacing="2" style="width:100%;">
+<table border="0" cellpadding="12" cellspacing="2" style="width:100%;"  STYLE="table-layout:fixed;">
 	<tbody>
 		<tr>
-			<td><img alt="" src="fotos/issste.png" style="width: 300px; height: 108px;" /></td>
+			<td><img alt="" src="fotos/issste.png" style="width: 400px; height: 108px;" /></td>
 			<td align='right'>
 				<table border="1" style="width:100%;">
 					<tr>
@@ -26,37 +26,38 @@
 	</tbody>
 </table>
 <br>
-<br>
+
+<p><strong>REMISION DE LA NOMINA DE &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    #DEBITO#  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     BANCOMER</strong></p>
 <table border="1" class="texto-centrado" style="width:100%";>
 	<tr>
 		<td>TIPO DE PERSONAL: </td>
-		<td >#FUNCIONARIOS#</td>
+		<td>#FUNCIONARIOS#</td>
 		<td>FECHA DE EMISION: </td>
-		<td >#31 DE JULIO DE 2016#</td>
+		<td>#31 DE JULIO DE 2016#</td>
 	</tr>
 	<tr>
 		<td>TIPO DE NOMINA: </td>
-		<td >#ORDINARIA QNA 14/2016#</td>
+		<td>#ORDINARIA QNA 14/2016#</td>
 		<td>CLAVE DE ADSCRIPCION: </td>
-		<td >#00077#</td>
+		<td>#00077#</td>
 	</tr>
 	<tr>
 		<td>FOLIOS: </td>
-		<td >DEL #3826482# AL #386482#</td>
+		<td>DEL #3826482# AL #386482#</td>
 		<td>LUGAR: </td>
-		<td >#MANZANA 15 S/N MODULO3 ENTRE RICARDO CASTRO Y FELIPE VILLANUEVA, TIJUANA B.C#</td>
+		<td>#MANZANA 15 S/N MODULO3 ENTRE RICARDO CASTRO Y FELIPE VILLANUEVA, TIJUANA B.C#</td>
 	</tr>
 	<tr>
 		<td>UNIDAD: </td>
-		<td >#E.B.D.I. No 105#</td>
+		<td>#E.B.D.I. No 105#</td>
 		<td>DEPENDENCIA: </td>
-		<td >#I.S.S.S.T.E.#</td>
+		<td>#I.S.S.S.T.E.#</td>
 	</tr>
 
 </table>
 <br>
 <table border="1" style="width:100%" class="texto-centrado">
-	<tr >
+	<tr>
 		<td rowspan="2">NUMERO DE EMPLEADO</td>
 		<td rowspan="2">NOMBRE DEL EMPLEADO</td>
 		<td rowspan="2">NUMERO DE CHEQUE</td>
@@ -70,7 +71,7 @@
 
 	<tr>
 		<td style="border:0px";>#332618#</td>
-		<td style="text-align:left; border:0px;">#HECTOR RICARDO FUENTES ARMENTA#</td>
+		<td style="text-align:left; border:0px;"><p class="indent">#HECTOR RICARDO FUENTES ARMENTA#</p></td>
 		<td style="border:0px";>#3826482#</td>
 		<td style="border:0px";>$ 4153.00</td>
 		<td style="border:0px";>53</td>
@@ -79,13 +80,18 @@
 	</tr>
 	<tr>
 		<td style="border:0px";>#225256#</td>
-		<td style="text-align:left; border:0px;">#JOSE PEREZ LOPEZ#</td>
+		<td style="text-align:left; border:0px;"><p class="indent">#JOSE PEREZ LOPEZ#</p></td>
 		<td style="border:0px";>#3826486#</td>
 		<td style="border:0px";>$ 6143.00</td>
 		<td style="border:0px";>53</td>
 		<td style="border:0px";>RENUNCIA</td>
 
 	</tr>
+	<tr>
+		<td  id="myRow"></td>
+	</tr>
+	
+
 </table>
 
 <br>
@@ -106,7 +112,7 @@
 		<td align="center">ATENTAMENTE</td>
 	</tr>
 	<tr>
-		<td  width="28%" class="protesta">
+		<td  width="35%" class="protesta">
 			"DECLARO BAJO PROTESTA; DECIR LA VERDAD QUE LOS DATOS Y FIRMAS CONTENIDOS EN ESTE FORMATO, SON VERIDICAS Y MANIFESTAMOS TENER CONOCIMIENTO DE LAS SANCIONES QUE SE APLICARAN EN CASO CONTRARIO"
 		</td>
 		<td align="center">
