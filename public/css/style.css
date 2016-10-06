@@ -1,0 +1,43 @@
+table, td {
+   
+   
+}
+body{
+  font-size: 12px;
+  padding-top: 60px;
+}
+.texto-centrado{
+   text-align: center;
+}
+.fixed-table {
+    
+    table-layout: fixed;
+}
+.contenedor {
+    width:100%;
+    
+}
+.left {
+   font-size: 9px;
+   line-height: 200%;
+   float:left;
+   width:370px;
+}
+
+.center {
+    display: inline-block;
+    margin:0 auto;
+    width:200px;
+}
+
+.right {
+    float:right;
+    width:200px;
+}
+.table-border {
+  border: none !important;
+}
+.protesta{
+   font-size: 9px;
+   line-height: 200%;
+}

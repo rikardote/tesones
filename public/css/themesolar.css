@@ -1,0 +1,407 @@
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  background-color: #E9EBEE; 
+  font-family: 'Lato';
+  margin-bottom: 60px;
+  padding: 0px;
+}
+      
+.fa-btn {
+  margin-right: 6px;
+}
+
+a:hover, a:visited, a:link, a:active{
+    text-decoration: none;
+}
+.no-bullet
+{
+    list-style-type: none!important;
+}
+
+footer { 
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 32.5px;
+  background-color: #4E5D6C;
+  text-align: center;
+ }
+
+.text-white{
+  color: white
+
+ }
+/*.date {
+  font-size: 10px;
+  font-weight: bold;
+}
+*/
+
+/*#1AB9C5;*/
+
+.blink {
+  color: red;
+    animation: blink 1s steps(5, start) infinite;
+    -webkit-animation: blink 1s steps(5, start) infinite;
+  }
+  @keyframes blink {
+    to {
+      visibility: hidden;
+    }
+  }
+  @-webkit-keyframes blink {
+    to {
+      visibility: hidden;
+  }
+}
+
+
+
+#card-div{
+  text-align: center;
+  
+  margin: 16px;
+  height: 50px;
+  
+
+}
+
+
+.tachado{
+	text-decoration:line-through;
+	color: #FF5151;
+}
+.chosen-choices{
+     min-width: 200px;
+ }
+
+ .ui-autocomplete {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  float: left;
+  display: none;
+  min-width: 160px;
+  _width: 160px;
+  padding: 4px 0;
+  margin: 2px 0 0 0;
+  list-style: none;
+  background: #E9EAED;
+  border-color: #ccc;
+  border-color: rgba(0, 0, 0, 0.2);
+  border-style: solid;
+  border-width: 1px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+  *border-right-width: 2px;
+  *border-bottom-width: 2px;
+}
+.ui-autocomplete-input, .ui-menu, .ui-menu-item {  z-index: 2006; }
+
+.ui-state-focus
+{
+    color:White;
+    background:#2980B9;
+    outline:none;
+    width: 100%; 
+}
+.ui-helper-hidden-accessible { display:none; }
+
+.ui-highlight .ui-state-default{
+      background: red !important;
+      border-color: red !important;
+      color: white !important;
+      border-style: dashed;
+      border-width: 5px;
+      border-radius: 4px 4px 4px 4px;
+      
+
+}
+.ui-highlight-permiso .ui-state-default{
+      background: grey !important;
+      border-color: grey !important;
+      color: white !important;
+      border-style: dashed;
+      border-width: 4px;
+      border-radius: 4px 4px 4px 4px;
+      
+
+}
+th.ui-datepicker-week-end,
+td.ui-datepicker-week-end {
+    display: none;
+}
+.ui-datepicker a {
+    text-decoration: none!important;
+}
+
+
+
+.align-right{
+  align: right!important;
+}
+.font-border{
+  color: yellow;
+   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.navbar {
+    position: relative;
+    min-height: 60px;
+    margin-bottom: 21px;
+    border: 1px solid transparent;
+}
+
+.toast-middle-center {  
+    top: 70px; 
+    left: 150%; 
+    margin-left: -50px; 
+} 
+/* Date Ribbon */
+
+.date {
+    background: #c4453c;
+    float: left;
+    height: 90px;
+    margin: 0;
+    position: relative;
+    width: 50px;
+}
+.date p {
+    color: #f6f6f6;
+    font: 18px/30px Georgia, sans-serif;
+    position: relative;
+    text-align: center;
+    text-shadow: 0 -1px 1px hsla(0,0%,0%,.1);
+}
+.date p:after {
+    content: '';
+    height: 25px;
+    left: -20px;
+    position: absolute;
+    top: -25px;
+    width: 90px;
+    box-shadow: 0 10px 10px -10px hsla(0,0%,0%,.5);
+}
+.date .day {
+    display: block;
+    font-size: 28px;
+    padding-bottom: 0px
+   
+}
+.date .dia {
+    
+    font-size: 20px;
+    padding-top: 0px
+}
+/* Traditional Ribbon */
+
+.traditional:after, .traditional:before {
+    border-top: 15px solid #c4453c; 
+    bottom: -15px;
+    content: '';
+    height: 0;
+    position: absolute;
+    width: 0;
+}
+.traditional:after {
+    border-right: 25px solid transparent;  
+    left: 0;  
+}
+.traditional:before {
+    border-left: 25px solid transparent;  
+    right: 0;  
+}
+
+/* Cut-off Ribbon */
+
+.cut-off:after {
+    background-image: -webkit-linear-gradient(45deg, #c4453c 25%, transparent 25%, transparent 75%, #c4453c 75%, #c4453c), 
+                      -webkit-linear-gradient(-45deg, #c4453c 25%, transparent 25%, transparent 75%, #c4453c 75%, #c4453c);
+    background-image:    -moz-linear-gradient(45deg, #c4453c 25%, transparent 25%, transparent 75%, #c4453c 75%, #c4453c),
+                         -moz-linear-gradient(-45deg, #c4453c 25%, transparent 25%, transparent 75%, #c4453c 75%, #c4453c);
+    background-image:     -ms-linear-gradient(45deg, #c4453c 25%, transparent 25%, transparent 75%, #c4453c 75%, #c4453c),
+                          -ms-linear-gradient(-45deg, #c4453c 25%, transparent 25%, transparent 75%, #c4453c 75%, #c4453c);
+    background-image:      -o-linear-gradient(45deg, #c4453c 25%, transparent 25%, transparent 75%, #c4453c 75%, #c4453c),
+                           -o-linear-gradient(-45deg, #c4453c 25%, transparent 25%, transparent 75%, #c4453c 75%, #c4453c);
+    background-image:         linear-gradient(45deg, #c4453c 25%, transparent 25%, transparent 75%, #c4453c 75%, #c4453c),
+                              linear-gradient(-45deg, #c4453c 25%, transparent 25%, transparent 75%, #c4453c 75%, #c4453c);
+    background-repeat: repeat-x;
+    background-position: 50% 0;
+    background-size: 10px 10px;
+    bottom: -5px;
+    content: '';
+    height: 5px;
+    left: 0;
+    position: absolute; /* Make sure the parent element has a position set */
+    right: 0;
+}
+
+/* Rounded Ribbon */
+
+.rounded:before {
+    background-image: -webkit-radial-gradient(#c4453c 50%, transparent 50%);
+    background-position: 0% 100%;
+    background-repeat: repeat;
+    background-size: 10px 10px;
+    bottom: -5px;
+    content: '';
+    height: 95px;
+    left: -5px;
+    position: absolute;
+    right: -5px;
+}
+
+div.calander{
+float:left;
+width:13%;
+color:#777;
+background: #F7F7F7;
+margin-right:10px;  
+margin-top:0px;
+text-align: center; 
+text-align: center;
+border:2px solid #Cacaca;
+border-radius: 8px;
+margin-bottom:10px;
+
+
+
+}
+p.date{
+font-size:34px;
+font-weight:bold;
+margin:0;
+margin-bottom:-10px;
+text-align: center;
+}
+p.month{
+margin:0;
+padding:0;
+padding-bottom:5px;
+font-size:14px;
+  
+}
+
+p.year{
+  margin:0px;
+  padding:0px;
+  width:100%;
+
+  
+}
+.dia{
+ margin-top: 6px;
+  font-size: 20px;
+}
+.date-radius{
+border-radius: 6px;
+border-bottom-right-radius:0px;
+border-bottom-left-radius:0px;
+}
+
+
+.modal-backdrop {
+  -webkit-backface-visibility: hidden;
+}
+.modal-backdrop.zoom,
+.modal-backdrop.newspaper,
+.modal-backdrop.move-horizontal,
+.modal-backdrop.move-from-top,
+.modal-backdrop.unfold-3d,
+.modal-backdrop.zoom-out {
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+.modal-backdrop.in {
+  opacity: 0.5;
+}
+.modal-backdrop.unfold-3d {
+  perspective: 500;
+}
+.modal.zoom .modal-dialog {
+  opacity: 0;
+  -webkit-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  transform: scale(0.6);
+}
+.modal.in .modal-dialog {
+  opacity: 1;
+  -webkit-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  transform: scale(1);
+}
+.modal.fade.newspaper .modal-dialog,
+.modal.newspaper .modal-dialog {
+  opacity: 0;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s;
+  transform: scale(0) rotate(500deg);
+}
+.modal.fade.newspaper.in .modal-dialog,
+.modal.in .modal-dialog {
+  opacity: 1;
+  transform: scale(1) rotate(0deg);
+}
+.modal.move-horizontal .modal-dialog {
+  opacity: 0;
+  transition: all 0.5s;
+  transform: translateX(-50px);
+}
+.modal.in .modal-dialog {
+  opacity: 1;
+  transform: translateX(0);
+}
+.modal.move-from-top .modal-dialog {
+  opacity: 0;
+  transition: all 0.5s;
+  transform: translateY(-100px);
+}
+.modal.in .modal-dialog {
+  opacity: 1;
+  transform: translateY(0);
+}
+.modal.unfold-3d .modal-dialog {
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+  transform-style: preserve-3d;
+  transform: rotateY(-60deg);
+}
+.modal.in .modal-dialog {
+  opacity: 1;
+  transform: rotateY(0deg);
+}
+.modal.fade.zoom-out .modal-dialog,
+.modal.zoom-out .modal-dialog {
+  opacity: 0;
+  transition: all 0.5s;
+  transform: scale(1.3);
+}
+.modal.fade.zoom-out.in .modal-dialog,
+.modal.in .modal-dialog {
+  opacity: 1;
+  transform: scale(1);
+}
+.csstransforms3d .modal.unfold-3d .modal-dialog {
+  transform: none;
+  transform-origin: 50% 100%;
+  transform: scale(0.7) rotate3d(-1, 1, 0, -60deg);
+}
+.csstransforms3d .modal.in .modal-dialog {
+  transform: scale(1) rotate3d(-1, 1, 0, 0deg);
+}
