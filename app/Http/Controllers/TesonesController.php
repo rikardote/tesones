@@ -8,6 +8,7 @@ use App\Http\Requests;
 use Laracasts\Flash\Flash;
 use App\Teson;
 use App\User;
+use App\Cancelation;
 use Carbon\Carbon;
 
 class TesonesController extends Controller
@@ -21,7 +22,8 @@ class TesonesController extends Controller
     {
     	$teson = Teson::find($id);
     	$user = User::find($teson->user_id);
-    	return view('tesones.show')->with('teson', $teson)->with('user', $user);
+    	$cancelaciones = Cancelation::where('teson_id', '=', $teson->id)->get();
+    	return view('tesones.show')->with('teson', $teson)->with('user', $user)->with('cancelaciones', $cancelaciones);
     }
     public function create()
     {
@@ -37,5 +39,19 @@ class TesonesController extends Controller
     	$teson->save();
     	Flash::info('Teson Generado exitosamente');
         return redirect()->route('tesones.show',[$teson->id]);
+    }
+    public function cancelar($teson_id)
+    {
+    	$teson = Teson::find($teson_id);
+    	$cancelaciones = Cancelation::where('teson_id', '=', $teson_id)->get();
+    	return view('tesones.cancelaciones')->with('teson', $teson)->with('cancelaciones', $cancelaciones);
+    }
+    public function cancelar_store(Request $request, $teson_id)
+    {
+    	$cancelacion = new Cancelation($request->all());
+    	$cancelacion->teson_id = $teson_id;
+    	$cancelacion->save();
+    	Flash::info('Cancelacion exitosa');
+        return redirect()->route('cancelar.teson',[$teson_id]);
     }
 }

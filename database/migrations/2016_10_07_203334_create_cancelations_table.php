@@ -14,6 +14,12 @@ class CreateCancelationsTable extends Migration
     {
         Schema::create('cancelations', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('teson_id');
+            $table->integer('num_empleado');
+            $table->string('nombre');
+            $table->integer('numero_cheque');
+            $table->decimal('importe');
+            $table->integer('clave');
             $table->timestamps();
         });
     }

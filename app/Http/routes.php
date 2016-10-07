@@ -16,9 +16,13 @@ Route::resource('tesones', 'TesonesController');
 Route::resource('usuarios', 'UsersController');
 Route::resource('cancelaciones', 'CancelacionesController');
 Route::get('cancelar/{teson}', [
-        'uses' => 'TesonController@cancelar',
+        'uses' => 'TesonesController@cancelar',
         'as' => 'cancelar.teson'
-    ]);
+]);
+Route::post('cancelar/{teson}', [
+        'uses' => 'TesonesController@cancelar_store',
+        'as' => 'cancelar.teson.store'
+]);
 
 Route::auth();
 

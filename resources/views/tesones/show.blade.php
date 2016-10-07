@@ -87,16 +87,17 @@
 		<td >CLAVE</td>
 		<td >DESCRIPCION</td>
 	</tr>
+	@foreach($cancelaciones as $cancelacion)
+		<tr>
+			<td style="border:0px";>{{$cancelacion->num_empleado}}</td>
+			<td style="text-align:left; border:0px;"><p class="indent">{{$cancelacion->nombre}}</p></td>
+			<td style="border:0px";>{{$cancelacion->numero_cheque}}</td>
+			<td style="border:0px";>$ {{$cancelacion->importe}}</td>
+			<td style="border:0px";>{{$cancelacion->clave}}</td>
+			<td style="border:0px";></td>
 
-	<tr>
-		<td style="border:0px";>#332618#</td>
-		<td style="text-align:left; border:0px;"><p class="indent">#HECTOR RICARDO FUENTES ARMENTA#</p></td>
-		<td style="border:0px";>#3826482#</td>
-		<td style="border:0px";>$ 4153.00</td>
-		<td style="border:0px";>53</td>
-		<td style="border:0px";>RENUNCIA</td>
-
-	</tr>
+		</tr>
+	@endforeach
 </table>
 
 <br>
@@ -134,6 +135,6 @@
 </table>
 <hr>
 
-<a href="{{route('cancelar.teson', $teson->id) }}"><span class="fa fa-times fa-2x" aria-hidden="true"></span></a>
+<a class="btn btn-info pull pull-left" href="{{route('cancelar.teson', $teson->id) }}">Agregar Cancelaciones</a>
 <button class="btn btn-info pull pull-right">Imprimir</button>
 @endsection

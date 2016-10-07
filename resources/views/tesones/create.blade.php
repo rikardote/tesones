@@ -5,7 +5,7 @@
 @section('content')
 
 	
-		<div class="panel panel-primary">
+	<div class="panel panel-primary">
 		  <div class="panel-heading">Nuevo Teson</div>
 		<div class="panel-body">
 			{!! Form::open(['route' => 'tesones.store', 'method' => 'POST']) !!}
@@ -13,6 +13,7 @@
   	  {!! Form::submit('Generar Teson', ['class' => 'btn btn-success btn-block']) !!}
 	    {!! Form::close() !!}
 		</div>
+  </div>
 @endsection
 
 @section('js')
