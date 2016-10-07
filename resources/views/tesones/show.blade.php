@@ -7,16 +7,16 @@
 <table border="0" cellpadding="12" cellspacing="2" style="width:100%;"  STYLE="table-layout:fixed;">
 	<tbody>
 		<tr>
-			<td><img alt="" src="fotos/issste.png" style="width: 400px; height: 108px;" /></td>
+			<td><img alt="" src="../fotos/issste.png" style="width: 400px; height: 108px;" /></td>
 			<td align='right'>
 				<table border="1" style="width:100%;">
 					<tr>
 						<div align="right">(T-SON 19.1)</div>
 						<td align="center" colspan=3>FECHA DE ELABORACION</td>
 							<tr>
-								<td align="center">DIA: #22#</td>
-								<td align="center">MES: #AGOSTO#</td>
-								<td align="center">AÑO: #2016#</td>
+								<td align="center">DIA: {{getDay($teson->fecha_elaboracion)}}</td>
+								<td align="center">MES: {{getMonth($teson->elaboracion)}}</td>
+								<td align="center">AÑO: {{getYear($teson->fecha_elaboracion)}}</td>
 							</tr>
 					</tr>
 				</table>
@@ -27,31 +27,50 @@
 </table>
 <br>
 
-<p><strong>REMISION DE LA NOMINA DE &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    #DEBITO#  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     BANCOMER</strong></p>
+<p><strong>REMISION DE LA NOMINA DE &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    
+			@if($teson->remision_nomina == 1)
+				DEBITO
+			@else
+				CHEQUES
+			@endif  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     BANCOMER</strong></p>
 <table border="1" class="texto-centrado" style="width:100%";>
 	<tr>
 		<td>TIPO DE PERSONAL: </td>
-		<td>#FUNCIONARIOS#</td>
+		<td>
+			@if($teson->tipo_personal == 1)
+				FUNCIONARIO
+			@else
+				OPERATIVOS
+			@endif
+		</td>
 		<td>FECHA DE EMISION: </td>
-		<td>#31 DE JULIO DE 2016#</td>
+		<td>
+			{{getDay($teson->fecha_emision)}} DE {{getMonth($teson->fecha_emision)}} DE {{getYear($teson->fecha_emision)}}
+		</td>
 	</tr>
 	<tr>
 		<td>TIPO DE NOMINA: </td>
-		<td>#ORDINARIA QNA 14/2016#</td>
+		<td>
+			@if($teson->tipo_nomina == 1)
+				ORDINARIA
+			@else
+				EXTRAORDINARIA
+			@endif
+		</td>
 		<td>CLAVE DE ADSCRIPCION: </td>
-		<td>#00077#</td>
+		<td>{{$user->adscripcion}}</td>
 	</tr>
 	<tr>
 		<td>FOLIOS: </td>
-		<td>DEL #3826482# AL #386482#</td>
+		<td>DEL {{$teson->folio_inicial}} AL {{$teson->folio_final}}</td>
 		<td>LUGAR: </td>
-		<td>#MANZANA 15 S/N MODULO3 ENTRE RICARDO CASTRO Y FELIPE VILLANUEVA, TIJUANA B.C#</td>
+		<td>{{$user->lugar}}</td>
 	</tr>
 	<tr>
 		<td>UNIDAD: </td>
-		<td>#E.B.D.I. No 105#</td>
+		<td>{{$user->unidad}}</td>
 		<td>DEPENDENCIA: </td>
-		<td>#I.S.S.S.T.E.#</td>
+		<td>I.S.S.S.T.E.</td>
 	</tr>
 
 </table>
@@ -78,27 +97,13 @@
 		<td style="border:0px";>RENUNCIA</td>
 
 	</tr>
-	<tr>
-		<td style="border:0px";>#225256#</td>
-		<td style="text-align:left; border:0px;"><p class="indent">#JOSE PEREZ LOPEZ#</p></td>
-		<td style="border:0px";>#3826486#</td>
-		<td style="border:0px";>$ 6143.00</td>
-		<td style="border:0px";>53</td>
-		<td style="border:0px";>RENUNCIA</td>
-
-	</tr>
-	<tr>
-		<td  id="myRow"></td>
-	</tr>
-	
-
 </table>
 
 <br>
 <table border="1" width="100%">
 	<tr>
 		<td align="left">OBSERVACIONES: <br>
-			######################################### # 3
+			<strong>{{$teson->observaciones}}</strong>
 		</td>
 	</tr>
 </table>
@@ -118,13 +123,17 @@
 		<td align="center">
 				TITULAR DEL AREA
 			<br><br>
-			<u><strong>C.P. RAQUEL DURAN PUENTES</strong></u>
+			<u><strong>{{$user->titular_area}}</strong></u>
 		</td>
 		<td align="center">
 				PAGADOR HABILITADO
 			<br><br>
-			<u><strong>C.P. RAQUEL DURAN PUENTES</strong></u>
+			<u><strong>{{$user->pagador_habilitado}}</strong></u>
 		</td>
 	</tr>
 </table>
+<hr>
+
+<a href="{{route('cancelar.teson', $teson->id) }}"><span class="fa fa-times fa-2x" aria-hidden="true"></span></a>
+<button class="btn btn-info pull pull-right">Imprimir</button>
 @endsection

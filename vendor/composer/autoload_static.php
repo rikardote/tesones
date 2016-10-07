@@ -18,6 +18,7 @@ class ComposerStaticInit49491e02a965d977a913778c5c490a0a
         '58571171fd5812e6e447dce228f52f4d' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Support/helpers.php',
         'e23faeee409e941dc9b4c80386209c39' => __DIR__ . '/..' . '/laracasts/flash/src/Laracasts/Flash/functions.php',
         'f18cc91337d49233e5754e93f3ed9ec3' => __DIR__ . '/..' . '/laravelcollective/html/src/helpers.php',
+        '6d394c3a532652dafb4dd296ba6a3f0b' => __DIR__ . '/../..' . '/app/Http/helpers.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -279,8 +280,10 @@ class ComposerStaticInit49491e02a965d977a913778c5c490a0a
     );
 
     public static $classMap = array (
-        'CreateDatosTable' => __DIR__ . '/../..' . '/database/migrations/2016_10_06_173534_create_datos_table.php',
+        'AddMoreinfoToUsersTable' => __DIR__ . '/../..' . '/database/migrations/2016_10_07_173731_add_moreinfo_to_users_table.php',
+        'CreateCancelationsTable' => __DIR__ . '/../..' . '/database/migrations/2016_10_07_203334_create_cancelations_table.php',
         'CreatePasswordResetsTable' => __DIR__ . '/../..' . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
+        'CreateTesonsTable' => __DIR__ . '/../..' . '/database/migrations/2016_10_07_170645_create_tesons_table.php',
         'CreateUsersTable' => __DIR__ . '/../..' . '/database/migrations/2014_10_12_000000_create_users_table.php',
         'DatabaseSeeder' => __DIR__ . '/../..' . '/database/seeds/DatabaseSeeder.php',
         'File_Iterator' => __DIR__ . '/..' . '/phpunit/php-file-iterator/src/Iterator.php',

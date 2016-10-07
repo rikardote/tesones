@@ -6,14 +6,13 @@
     <!-- Fonts -->
     <link rel="stylesheet" href="{{ asset('plugins/font-awesome/css/font-awesome.min.css') }}">
     
-
-    <!-- Styles -->
+     <!-- Styles -->
     <link rel="stylesheet" href="{{ asset('css/jquery-bootstrap-datepicker.css') }}">
     <link rel="stylesheet" href="{{ asset('css/bootswatch/cosmo.css') }}">
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
-
+    @include('partials.nav')
     <section>
-        <div class="">
+        <div class="container">
              <div class="row">
                 <div class="col-md-10 col-md-offset-1">
                     <div id="alert"> @include('flash::message')</div>
@@ -31,13 +30,17 @@
     <script src="{{ asset('plugins/datepicker/js/jquery-ui.js') }}"></script>
     <script src="{{ asset('plugins/datepicker/js/ui.datepicker-es-MX.js') }}"></script>
     <script src="{{ asset('plugins/bootstrap/js/bootstrap.js') }}"></script>
+    @yield('js')
 
     <script type="text/javascript">
+    $('#alert').delay(5000).fadeOut(200)
+
       var divWidth = 66*0.4;
       document.getElementById("myRow").setAttribute('width', divWidth);//defaults to pixels
       //or if you really want this as a percentage
       document.getElementById("myRow").setAttribute('width', divWidth+'%');//percent
     </script>
+
 
 </body>
 </html>

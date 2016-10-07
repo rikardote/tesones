@@ -12,5 +12,14 @@
 */
 
 
- Route::resource('/', 'TesonesController');
+Route::resource('tesones', 'TesonesController');
+Route::resource('usuarios', 'UsersController');
+Route::resource('cancelaciones', 'CancelacionesController');
+Route::get('cancelar/{teson}', [
+        'uses' => 'TesonController@cancelar',
+        'as' => 'cancelar.teson'
+    ]);
 
+Route::auth();
+
+Route::get('/home', 'HomeController@index');
