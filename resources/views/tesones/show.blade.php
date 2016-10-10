@@ -38,7 +38,7 @@
 		<td>TIPO DE PERSONAL: </td>
 		<td>
 			@if($teson->tipo_personal == 1)
-				FUNCIONARIO
+				FUNCIONARIOS
 			@else
 				OPERATIVOS
 			@endif
@@ -136,5 +136,6 @@
 <hr>
 
 <a class="btn btn-info pull pull-left" href="{{route('cancelar.teson', $teson->id) }}">Agregar Cancelaciones</a>
-<button class="btn btn-info pull pull-right">Imprimir</button>
+<a class="btn btn-info pull pull-right" href="{{route('tesones.edit', $teson->id) }}">Modificar Teson</a>
+
 @endsection

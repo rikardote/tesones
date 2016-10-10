@@ -26,4 +26,4 @@ Route::post('cancelar/{teson}', [
 
 Route::auth();
 
-Route::get('/home', 'HomeController@index');
+Route::get('/', 'TesonesController@index');

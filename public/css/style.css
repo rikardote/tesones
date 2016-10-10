@@ -1,7 +1,6 @@
- table td
-    {
-    
-    }
+a {
+  text-decoration: none!important; 
+}
 
 body{
   font-size: 12px;

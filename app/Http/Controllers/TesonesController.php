@@ -18,6 +18,13 @@ class TesonesController extends Controller
         $this->middleware('auth');
     }
 
+    public function index()
+    {
+		$user = \Auth::user();
+    	$tesones = Teson::orderBy('fecha_emision', 'DESC')->where('user_id', '=', $user->id)->paginate(10);
+    	return view('tesones.index')->with('tesones', $tesones)->with('user', $user);
+    }
+
     public function show($id)
     {
     	$teson = Teson::find($id);
@@ -29,6 +36,11 @@ class TesonesController extends Controller
     {
     	return view('tesones.create');
     }
+    public function edit($id)
+    {
+    	$teson = Teson::find($id);
+    	return view('tesones.edit')->with('teson', $teson);
+    }
     public function store(Request $request)
     {
     	$user = \Auth::user();
@@ -38,6 +50,14 @@ class TesonesController extends Controller
     	$teson->fecha_elaboracion = Carbon::today();
     	$teson->save();
     	Flash::info('Teson Generado exitosamente');
+        return redirect()->route('tesones.show',[$teson->id]);
+    }
+    public function update(Request $request, $id)
+    {
+    	$teson = Teson::find($id);
+    	$teson->fill($request->all());
+        $teson->save();
+    	Flash::info('Teson modificado exitosamente');
         return redirect()->route('tesones.show',[$teson->id]);
     }
     public function cancelar($teson_id)
@@ -54,4 +74,5 @@ class TesonesController extends Controller
     	Flash::info('Cancelacion exitosa');
         return redirect()->route('cancelar.teson',[$teson_id]);
     }
+  
 }
