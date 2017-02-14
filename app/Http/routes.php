@@ -24,6 +24,11 @@ Route::post('cancelar/{teson}', [
         'as' => 'cancelar.teson.store'
 ]);
 
+Route::get('tesones/{id}/imprimir', [
+        'uses' => 'TesonesController@print_teson',
+        'as' => 'print_teson'
+]);
+
 Route::auth();
 
 Route::get('/', 'TesonesController@index');

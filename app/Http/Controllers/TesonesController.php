@@ -10,6 +10,7 @@ use App\Teson;
 use App\User;
 use App\Cancelation;
 use Carbon\Carbon;
+use \mPDF;
 
 class TesonesController extends Controller
 {
@@ -73,6 +74,27 @@ class TesonesController extends Controller
     	$cancelacion->save();
     	Flash::info('Cancelacion exitosa');
         return redirect()->route('cancelar.teson',[$teson_id]);
+    }
+    public function print_teson(Request $request, $id)
+    {
+
+        $teson = Teson::find($id);
+        $user = User::find($teson->user_id);
+        $cancelaciones = Cancelation::where('teson_id', '=', $teson->id)->get();
+
+        $mpdf = new mPDF('', 'Legal-L');
+        //$header = \View('reportes.header_semanal')->with('date', $fecha_inicio)->with('date2', $fecha_final)->render();
+        //$mpdf->SetFooter('Generado el: {DATE j-m-Y}| Programacion de Cirugias | &copy;'.date('Y').' ISSSTE BAJA CALIFORNIA');
+        $html =  \View('tesones.print_teson')->with('teson', $teson)->with('user', $user)->with('cancelaciones', $cancelaciones)->render();
+        $pdfFilePath = 'teson.pdf';
+        $mpdf->setAutoTopMargin = 'stretch';
+        $mpdf->setAutoBottomMargin = 'stretch';
+        //$mpdf->setHTMLHeader($header);
+        $mpdf->SetDisplayMode('fullpage');
+        $mpdf->WriteHTML($html);
+   
+        $mpdf->Output($pdfFilePath, "I"); //D
+
     }
   
 }

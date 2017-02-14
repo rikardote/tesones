@@ -10,7 +10,10 @@
     <link rel="stylesheet" href="{{ asset('css/jquery-bootstrap-datepicker.css') }}">
     <link rel="stylesheet" href="{{ asset('css/bootswatch/cosmo.css') }}">
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/flotante.css') }}">
+
     @include('partials.nav')
+
     <section>
         <div class="container">
              <div class="row">

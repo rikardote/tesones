@@ -3,6 +3,11 @@
 @section('title', 'TESONES')
 
 @section('content')
+	<div class="social">
+     	<ul>
+            <li><a href="{{route('print_teson', [$teson->id])}}" class="icon-pdf"><i class="fa fa-file-pdf-o fa-2x "></i></a></li>
+        </ul>
+    </div>
 
 <table border="0" cellpadding="12" cellspacing="2" style="width:100%;"  STYLE="table-layout:fixed;">
 	<tbody>
