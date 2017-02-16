@@ -1,11 +1,25 @@
-<table border="0" cellpadding="12" cellspacing="1" style="width:100%;"  style="border-top-style:solid">
+<style>
+.table-logo td{
+    border: 1px solid black;
+    font-size: 12px;
+
+}
+table{
+	border-collapse:inherit;
+	font-size: 12px;
+}
+.no-border tr{
+	 border-left: none;
+}
+</style>
+
+<table width="100%">
 	<tbody>
 		<tr>
-			<td><img alt="" src="../fotos/issste.png" style="width: 300px; height: 108px;" /></td>
+			<td><img alt="" src="../fotos/issste.png" style="width: 400px; height: 108px;" /></td>
 			<td align='right'>
-				<table style="width:100% border-top-style:solid">
+				<table width="100%" class="table-logo">
 					<tr>
-						<div align="right">(T-SON 19.1)</div>
 						<td align="center" colspan=3>FECHA DE ELABORACION</td>
 							<tr>
 								<td align="center">DIA: {{getDay($teson->fecha_elaboracion)}}</td>
@@ -27,7 +41,7 @@
 			@else
 				CHEQUES
 			@endif  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     BANCOMER</strong></p>
-<table border="1" class="texto-centrado" style="width:100% border-top-style:solid";>
+<table cellpadding="1" cellspacing="1" width="100%" class="texto-centrado table-logo">
 	<tr>
 		<td>TIPO DE PERSONAL: </td>
 		<td>
@@ -69,7 +83,7 @@
 
 </table>
 <br>
-<table border="1" style="width:100% border-top-style:solid" class="texto-centrado">
+<table border="0" width="100%" >
 	<tr>
 		<td rowspan="2">NUMERO DE EMPLEADO</td>
 		<td rowspan="2">NOMBRE DEL EMPLEADO</td>
@@ -82,20 +96,24 @@
 		<td >DESCRIPCION</td>
 	</tr>
 	@foreach($cancelaciones as $cancelacion)
-		<tr>
-			<td style="border:0px";>{{$cancelacion->num_empleado}}</td>
-			<td style="text-align:left; border:0px;"><p class="indent">{{$cancelacion->nombre}}</p></td>
-			<td style="border:0px";>{{$cancelacion->numero_cheque}}</td>
-			<td style="border:0px";>$ {{$cancelacion->importe}}</td>
-			<td style="border:0px";>{{$cancelacion->clave}}</td>
-			<td style="border:0px";></td>
+		<tr class="no-border">
+			<td>{{$cancelacion->num_empleado}}</td>
+			<td><p class="indent">{{$cancelacion->nombre}}</p></td>
+			<td>{{$cancelacion->numero_cheque}}</td>
+			<td>$ {{$cancelacion->importe}}</td>
+			<td>{{$cancelacion->clave}}</td>
+			<td></td>
 
 		</tr>
 	@endforeach
+	@for($i=$cancelaciones->count(); $i<=14; $i++)
+		<tr><td  colspan="6">&nbsp;</td></tr>
+	@endfor
 </table>
 
+
 <br>
-<table border="1" width="100%">
+<table width="100%"  class="table-logo">
 	<tr>
 		<td align="left">OBSERVACIONES: <br>
 			<strong>{{$teson->observaciones}}</strong>
@@ -107,12 +125,12 @@
 
 <table width="100%">
 	<tr>
-		<td style="font-size: 9px"><strong>NOTA:</strong></td>
+		<td style="font-size: 10px"><strong>NOTA:</strong></td>
 		<td align="center">ATENTAMENTE</td>
 		<td align="center">ATENTAMENTE</td>
 	</tr>
 	<tr>
-		<td  width="35%" class="protesta">
+		<td  style="font-size: 9px" width="35%" class="protesta">
 			"DECLARO BAJO PROTESTA; DECIR LA VERDAD QUE LOS DATOS Y FIRMAS CONTENIDOS EN ESTE FORMATO, SON VERIDICAS Y MANIFESTAMOS TENER CONOCIMIENTO DE LAS SANCIONES QUE SE APLICARAN EN CASO CONTRARIO"
 		</td>
 		<td align="center">
