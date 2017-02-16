@@ -40,6 +40,7 @@
 		{!! Form::select('clave', [ '50' => '50 - CAMBIO DE TIPO DE NOMBRAMIENTO O CON CONTRATACION, CAMBIO DE PLAZA', 
 									'51' => '51 - TERMINO DE CONTRATACION, COMISION O PROVISIONALIDAD',
 									'52' => '52 - DEFUNCION',
+									'53' => '53 - RENUNCIA',
 									'54' => '54 - LICENCIA SIN SUELDO',
 									'55' => '55 - DUPLICIDAD DE NUMERO DE EMPLEADO',
 									'56' => '56 - EXCESO DE INCAPACIDADES',
