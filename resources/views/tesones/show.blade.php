@@ -3,7 +3,7 @@
 @section('title', 'TESONES')
 
 @section('content')
-	<div class="social">
+	<div class="social noprint">
      	<ul>
             <li><a href="{{route('print_teson', [$teson->id])}}" class="icon-pdf"><i class="fa fa-file-pdf-o fa-2x "></i></a></li>
         </ul>
@@ -103,6 +103,9 @@
 
 		</tr>
 	@endforeach
+	@for($i=$cancelaciones->count(); $i<=20; $i++)
+		<tr><td style="border:0px"; colspan="6">&nbsp;</td></tr>
+	@endfor
 </table>
 
 <br>
@@ -140,7 +143,7 @@
 </table>
 <hr>
 
-<a class="btn btn-info pull pull-left" href="{{route('cancelar.teson', $teson->id) }}">Agregar Cancelaciones</a>
-<a class="btn btn-info pull pull-right" href="{{route('tesones.edit', $teson->id) }}">Modificar Teson</a>
+<a class="noprint btn btn-info pull pull-left" href="{{route('cancelar.teson', $teson->id) }}">Agregar Cancelaciones</a>
+<a class="noprint btn btn-info pull pull-right" href="{{route('tesones.edit', $teson->id) }}">Modificar Teson</a>
 
 @endsection

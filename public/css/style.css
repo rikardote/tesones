@@ -44,3 +44,9 @@ body{
 .indent {
     margin-left: 50px;
 }
+
+@media print {
+    .noprint {
+        display: none;
+    }
+}

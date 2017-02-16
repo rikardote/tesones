@@ -405,3 +405,16 @@ border-bottom-left-radius:0px;
 .csstransforms3d .modal.in .modal-dialog {
   transform: scale(1) rotate3d(-1, 1, 0, 0deg);
 }
+
+@media print
+{
+    #pager,
+    form,
+    .no-print
+    {
+        display: none !important;
+        height: 0;
+    }
+
+
+}
