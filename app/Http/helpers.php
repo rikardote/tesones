@@ -45,3 +45,54 @@ function getYear($date) {
     $dt = Carbon::parse($date);
     return $dt->year;
 }
+
+function getCancelacion($clave){
+  switch ($clave) {
+      case 51:
+        return 'TERMINO DE CONTRATACION, COMISION O PROVISIONALIDAD';
+      case 52:
+        return 'DEFUNCION';
+      case 53:
+        return 'RENUNCIA';
+      case 54:
+        return 'LICENCIA SIN SUELDO';
+      case 55:
+        return 'DUPLICIDAD DE NUMERO DE EMPLEADO';
+      case 56:
+        return 'EXCESO DE INCAPACIDADES';
+      case 57:
+        return 'RENUNCIA POR PENSION O JUBILACION';
+      case 58:
+        return 'POR NO TOMAR POSESION DEL CARGO';
+      case 59:
+        return 'CESE';
+      case 60:
+        return 'POR NO PRESENTARSE A COBRAR A TIEMPO';
+      case 61:
+        return 'PAGO IMPROCEDENTE PARCIAL, TRAMITE JURIDICO';
+      case 62:
+        return 'ERROR DE IMPRESION';
+      case 63:
+        return 'ERROR DE IMPRESION';
+      case 64:
+        return 'CANCELADO INDEBIDAMENTE';
+      case 65:
+        return 'NO LABORAR EN LA UNIDAD';
+      case 66:
+        return 'CAMBIO DE RESIDENCIA (MEDICOS RESIDENTES)';
+      case 67:
+        return 'TERMINO DE VIGENCIA';
+      case 68:
+        return 'POR ROBO O EXTRAVIO';
+      case 69:
+        return 'DETERIORO O MALTRATO';  
+      case 70:
+        return 'AJUSTE DE SUELDO';
+      case 80:
+        return 'CHEQUE DESTRUIDO';
+      case 81:
+        return 'EXTRAVIO';
+    }
+}
+
+

@@ -80,7 +80,7 @@
 	<tr>
 		<td rowspan="2">NÚMERO DE EMPLEADO</td>
 		<td rowspan="2">NOMBRE</td>
-		
+
 		@if($teson->remision_nomina == 1)
 			<td rowspan="2">NÚMERO DE RECIBO</td>
 		@else
@@ -101,7 +101,7 @@
 			<td style="border:0px";>{{$cancelacion->numero_cheque}}</td>
 			<td style="border:0px";>$ {{number_format($cancelacion->importe,2)}}</td>
 			<td style="border:0px";>{{$cancelacion->clave}}</td>
-			<td style="border:0px";></td>
+			<td style="border:0px";>{{getCancelacion($cancelacion->clave)}}</td>
 
 		</tr>
 	@endforeach
