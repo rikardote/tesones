@@ -16,13 +16,9 @@
 	<tbody>
 		@foreach($tesones as $teson)
 			<tr>
-				<td><a href="{{route('tesones.show',$teson->id)}}">{{fecha_dmy($teson->fecha_emision)}}</a></td>
+				<td><a href="{{route('tesones.show',$teson->id)}}">{{fecha_dmy($teson->nomina->fecha_emision)}}</a></td>
 				<td>
-					@if($teson->tipo_nomina == 1)
-						ORDINARIA
-					@else
-						EXTRAORDINARIA
-					@endif
+					{{ $teson->nomina->nomina }}
 				</td>
 				<td>
 					@if($teson->tipo_personal == 1)
@@ -42,5 +38,5 @@
 		@endforeach
 	</tbody>
 </table>
-{!! $tesones->render() !!}
+
 @endsection

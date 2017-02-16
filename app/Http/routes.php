@@ -14,6 +14,11 @@
 
 Route::resource('tesones', 'TesonesController');
 Route::resource('usuarios', 'UsersController');
+Route::resource('info_nominas', 'NominasController');
+Route::get('info_nominas/{id}/destroy', [
+        'uses' => 'NominasController@destroy',
+        'as' => 'admin.info_nominas.destroy'
+]);
 Route::resource('cancelaciones', 'CancelacionesController');
 Route::get('cancelar/{teson}', [
         'uses' => 'TesonesController@cancelar',

@@ -6,5 +6,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Teson extends Model
 {
-   protected $fillable = ['remision_nomina', 'tipo_personal', 'tipo_nomina', 'folio_inicial', 'folio_final', 'fecha_emision', 'fecha_elaboracion', 'observaciones'];
+   protected $fillable = ['remision_nomina', 'tipo_personal', 'nomina_id', 'folio_inicial', 'folio_final', 'fecha_elaboracion', 'observaciones'];
+
+   public function nomina()
+   {
+       return $this->belongsTo('App\Nomina');
+   }
+   
 }

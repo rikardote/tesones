@@ -36,7 +36,10 @@
                             
                             <ul class="dropdown-menu" role="menu">
                                 <li><a href="{{ url('/usuarios') }}"><i class="fa fa-btn fa-cog"></i> Actualizar Informacion</a></li>
-                                <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i> Logout</a></li>
+                                 @if(Auth::user()->admin())
+                                    <li><a href="{{ url('/info_nominas') }}"><i class="fa fa-btn fa-database"></i> Agregar Nominas</a></li>
+                                @endif
+                                <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i> Cerrar</a></li>
                             </ul>
                         </li>
                     @endif

@@ -8,7 +8,6 @@
 		<div class="panel-body">
 			{!! Form::model($teson, ['route' => ['tesones.update', $teson->id], 'method' => 'PATCH']) !!}
 				@include('tesones.form')
-  	  {!! Form::submit('Generar Teson', ['class' => 'btn btn-success btn-block']) !!}
 	    {!! Form::close() !!}
 		</div>
     </div>

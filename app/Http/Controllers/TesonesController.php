@@ -8,6 +8,7 @@ use App\Http\Requests;
 use Laracasts\Flash\Flash;
 use App\Teson;
 use App\User;
+use App\Nomina;
 use App\Cancelation;
 use Carbon\Carbon;
 use \mPDF;
@@ -22,32 +23,39 @@ class TesonesController extends Controller
     public function index()
     {
 		$user = \Auth::user();
-    	$tesones = Teson::orderBy('fecha_emision', 'DESC')->where('user_id', '=', $user->id)->paginate(10);
+    	$tesones = Teson::where('user_id', '=', $user->id)->get();
+        $tesones->each(function($tesones) {
+            $tesones->nomina;
+        });
+
     	return view('tesones.index')->with('tesones', $tesones)->with('user', $user);
     }
 
     public function show($id)
     {
     	$teson = Teson::find($id);
+        $teson->nomina;
     	$user = User::find($teson->user_id);
     	$cancelaciones = Cancelation::where('teson_id', '=', $teson->id)->get();
     	return view('tesones.show')->with('teson', $teson)->with('user', $user)->with('cancelaciones', $cancelaciones);
     }
     public function create()
     {
-    	return view('tesones.create');
+        $nominas = Nomina::all()->lists('Fullnomina', 'id')->toArray();
+
+    	return view('tesones.create')->with('nominas', $nominas);
     }
     public function edit($id)
     {
     	$teson = Teson::find($id);
-    	return view('tesones.edit')->with('teson', $teson);
+        $nominas = Nomina::all()->lists('Fullnomina', 'id')->toArray();
+    	return view('tesones.edit')->with('teson', $teson)->with('nominas', $nominas);
     }
     public function store(Request $request)
     {
     	$user = \Auth::user();
     	$teson = new Teson($request->all());
     	$teson->user_id = $user->id;
-    	$teson->fecha_emision = fecha_ymd($request->fecha_emision);
     	$teson->fecha_elaboracion = Carbon::today();
     	$teson->save();
     	Flash::info('Teson Generado exitosamente');
@@ -79,6 +87,7 @@ class TesonesController extends Controller
     {
 
         $teson = Teson::find($id);
+        $teson->nomina;
         $user = User::find($teson->user_id);
         $cancelaciones = Cancelation::where('teson_id', '=', $teson->id)->get();
 

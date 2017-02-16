@@ -17,7 +17,7 @@
 				<table border="1" style="width:100%;">
 					<tr>
 						<div align="right">(T-SON 19.1)</div>
-						<td align="center" colspan=3>FECHA DE ELABORACION</td>
+						<td align="center" colspan=3>FECHA DE ELABORACIÓN</td>
 							<tr>
 								<td align="center">DIA: {{getDay($teson->fecha_elaboracion)}}</td>
 								<td align="center">MES: {{getMonth($teson->elaboracion)}}</td>
@@ -48,21 +48,17 @@
 				OPERATIVOS
 			@endif
 		</td>
-		<td>FECHA DE EMISION: </td>
+		<td>FECHA DE EMISIÓN: </td>
 		<td>
-			{{getDay($teson->fecha_emision)}} DE {{getMonth($teson->fecha_emision)}} DE {{getYear($teson->fecha_emision)}}
+			{{getDay($teson->nomina->fecha_emision)}} DE {{getMonth($teson->nomina->fecha_emision)}} DE {{getYear($teson->nomina->fecha_emision)}}
 		</td>
 	</tr>
 	<tr>
 		<td>TIPO DE NOMINA: </td>
 		<td>
-			@if($teson->tipo_nomina == 1)
-				ORDINARIA
-			@else
-				EXTRAORDINARIA
-			@endif
+			{{ $teson->nomina->nomina }}
 		</td>
-		<td>CLAVE DE ADSCRIPCION: </td>
+		<td>CLAVE DE ADSCRIPCIÓN: </td>
 		<td>{{$user->adscripcion}}</td>
 	</tr>
 	<tr>
@@ -75,29 +71,35 @@
 		<td>UNIDAD: </td>
 		<td>{{$user->unidad}}</td>
 		<td>DEPENDENCIA: </td>
-		<td>I.S.S.S.T.E.</td>
+		<td>DELEGACIÓN ESTATAL B.C.</td>
 	</tr>
 
 </table>
 <br>
 <table border="1" style="width:100%" class="texto-centrado">
 	<tr>
-		<td rowspan="2">NUMERO DE EMPLEADO</td>
-		<td rowspan="2">NOMBRE DEL EMPLEADO</td>
-		<td rowspan="2">NUMERO DE CHEQUE</td>
+		<td rowspan="2">NÚMERO DE EMPLEADO</td>
+		<td rowspan="2">NOMBRE</td>
+		
+		@if($teson->remision_nomina == 1)
+			<td rowspan="2">NÚMERO DE RECIBO</td>
+		@else
+			<td rowspan="2">NÚMERO DE CHEQUE</td>
+		@endif
+		
 		<td rowspan="2">IMPORTE</td>
-		<td colspan=2 > MOTIVO DE CANCELACION </td>
+		<td colspan=2 > MOTIVO DE CANCELACIÓN </td>
 	</tr>
 	<tr>
 		<td >CLAVE</td>
-		<td >DESCRIPCION</td>
+		<td >DESCRIPCIÓN</td>
 	</tr>
 	@foreach($cancelaciones as $cancelacion)
 		<tr>
 			<td style="border:0px";>{{$cancelacion->num_empleado}}</td>
 			<td style="text-align:left; border:0px;"><p class="indent">{{$cancelacion->nombre}}</p></td>
 			<td style="border:0px";>{{$cancelacion->numero_cheque}}</td>
-			<td style="border:0px";>$ {{$cancelacion->importe}}</td>
+			<td style="border:0px";>$ {{number_format($cancelacion->importe,2)}}</td>
 			<td style="border:0px";>{{$cancelacion->clave}}</td>
 			<td style="border:0px";></td>
 
@@ -131,13 +133,13 @@
 		</td>
 		<td align="center">
 				TITULAR DEL AREA
-			<br><br>
-			<u><strong>{{$user->titular_area}}</strong></u>
+			<br><br><br>
+			<strong><p style="text-decoration: overline;">{{$user->titular_area}}</p></strong>
 		</td>
 		<td align="center">
 				PAGADOR HABILITADO
-			<br><br>
-			<u><strong>{{$user->pagador_habilitado}}</strong></u>
+			<br><br><br>
+			<strong><p style="text-decoration: overline;">{{$user->pagador_habilitado}}</p></strong>
 		</td>
 	</tr>
 </table>

@@ -10,7 +10,6 @@
 		<div class="panel-body">
 			{!! Form::open(['route' => 'tesones.store', 'method' => 'POST']) !!}
 				@include('tesones.form')
-  	  {!! Form::submit('Generar Teson', ['class' => 'btn btn-success btn-block']) !!}
 	    {!! Form::close() !!}
 		</div>
   </div>
