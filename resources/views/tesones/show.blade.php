@@ -40,7 +40,7 @@
 			@endif
 
 			@if($teson->remision_nomina == 3)
-				TARJETAS DE VALES
+				TARJETAS DE VALES</strong></p>
 			@endif
 <table border="1" class="texto-centrado" style="width:100%";>
 	<tr>
