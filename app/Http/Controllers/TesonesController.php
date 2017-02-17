@@ -23,7 +23,7 @@ class TesonesController extends Controller
     public function index()
     {
 		$user = \Auth::user();
-    	$tesones = Teson::where('user_id', '=', $user->id)->get();
+    	$tesones = Teson::where('users.adscripcion', '=', $user->adscripcion)->get();
         $tesones->each(function($tesones) {
             $tesones->nomina;
         });

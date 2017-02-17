@@ -3,11 +3,7 @@
 @section('title', 'TESONES')
 
 @section('content')
-	<div class="social noprint">
-     	<ul>
-            <li><a href="{{route('print_teson', [$teson->id])}}" class="icon-pdf"><i class="fa fa-file-pdf-o fa-2x "></i></a></li>
-        </ul>
-    </div>
+	
 
 <table border="0" cellpadding="12" cellspacing="2" style="width:100%;"  STYLE="table-layout:fixed;">
 	<tbody>
@@ -107,6 +103,10 @@
 	@endforeach
 	@for($i=$cancelaciones->count(); $i<=20; $i++)
 		<tr><td style="border:0px"; colspan="6">&nbsp;</td></tr>
+		@if	($i==8 && $cancelaciones->count()==null)
+			<tr><td style="border:0px;font-size:40px;text-shadow: 3px 2px #808080;" colspan="6">&nbsp;PAGADA EN SU TOTALIDAD</td></tr>
+			{{--*/ $i=9 /*--}}
+		@endif
 	@endfor
 </table>
 
