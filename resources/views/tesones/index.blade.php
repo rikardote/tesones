@@ -30,9 +30,16 @@
 				<td>
 					@if($teson->remision_nomina == 1)
 						DEBITO
-					@else
-						CHEQUES
-					@endif 
+					@endif
+
+					@if($teson->remision_nomina == 2)
+							CHEQUES
+					@endif
+
+					@if($teson->remision_nomina == 3)
+							VALES
+					@endif
+
 				</td>
 			</tr>
 		@endforeach
