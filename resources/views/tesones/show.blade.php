@@ -30,10 +30,18 @@
 
 <p><strong>REMISION DE LA NOMINA DE &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    
 			@if($teson->remision_nomina == 1)
-				DEBITO
-			@else
-				CHEQUES
-			@endif  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     BANCOMER</strong></p>
+					DEBITO
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     BANCOMER</strong></p>
+			@endif
+
+			@if($teson->remision_nomina == 2)
+					CHEQUES
+			  		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     BANCOMER</strong></p>
+			@endif
+
+			@if($teson->remision_nomina == 3)
+				TARJETAS DE VALES
+			@endif
 <table border="1" class="texto-centrado" style="width:100%";>
 	<tr>
 		<td>TIPO DE PERSONAL: </td>
@@ -59,7 +67,11 @@
 	</tr>
 	<tr>
 		<td>FOLIOS: </td>
-		<td>DEL {{$teson->folio_inicial}} AL {{$teson->folio_final}}</td>
+		@if($teson->remision_nomina != 3)
+			<td>DEL {{$teson->folio_inicial}} AL {{$teson->folio_final}}</td>
+		@else
+			<td></td>
+		@endif
 		<td>LUGAR: </td>
 		<td>{{$user->lugar}}</td>
 	</tr>
