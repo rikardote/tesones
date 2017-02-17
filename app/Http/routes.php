@@ -13,6 +13,10 @@
 
 
 Route::resource('tesones', 'TesonesController');
+Route::get('tesones/{id}/destroy', [
+        'uses' => 'TesonesController@destroy',
+        'as' => 'admin.tesones.destroy'
+]);
 Route::resource('usuarios', 'UsersController');
 Route::resource('info_nominas', 'NominasController');
 Route::get('info_nominas/{id}/destroy', [
