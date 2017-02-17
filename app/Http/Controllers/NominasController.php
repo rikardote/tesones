@@ -27,6 +27,12 @@ class NominasController extends Controller
     	return view('admin.nominas.create');
     }
 
+    public function edit($id){
+    	$nomina = Nomina::find($id);
+
+    	return view('admin.nominas.edit')->with('nomina', $nomina);
+    }
+
     public function store(Request $request){
     	$nomina = new Nomina($request->all());
     	$nomina->fecha_emision = fecha_ymd($request->fecha_emision);
@@ -36,6 +42,17 @@ class NominasController extends Controller
 
         return redirect()->route('info_nominas.index');
     }
+
+	public function update(Request $request, $id){
+    	$nomina = Nomina::find($id);
+    	$nomina->fecha_emision = fecha_ymd($request->fecha_emision);
+    	$nomina->save();
+
+    	Flash::info('Nomina editada exitosamente');
+
+        return redirect()->route('info_nominas.index');
+    }
+
     public function destroy($id){
     	$nomina = Nomina::find($id);
         $nomina->delete();

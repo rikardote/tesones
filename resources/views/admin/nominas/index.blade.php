@@ -18,7 +18,7 @@
 						{{ $nomina->nomina }}
 					</td>
 					<td>
-       		            <a data-url="{{ route('info_nominas.edit', $nomina->id) }}" class="load-form-modal  panelColorGreen" data-toggle ="modal" data-target='#form-modal'>
+       		            <a href="{{ route('info_nominas.edit', $nomina->id) }}">
 			               <span class="fa fa-pencil-square-o fa-2x" aria-hidden='true'></span>
 			            </a> 
 			            <a href="{{ route('admin.info_nominas.destroy', $nomina->id) }}" onclick="return confirm('¿Seguro de borrar esta Nomina?');"><span class="fa fa-trash fa-2x panelColorRed" aria-hidden="true"></span></a>
