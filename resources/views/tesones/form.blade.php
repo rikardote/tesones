@@ -10,7 +10,7 @@
 	</div>
 	<div class="form-group">
 		{!! Form::label('remision_nomina', 'CHEQUES O DEBITO') !!}
-		{!! Form::select('remision_nomina', ['1' => 'DEBITO', '2' => 'CHEQUES', '3' => 'VALES',], null, [
+		{!! Form::select('remision_nomina', ['1' => 'DEBITO', '2' => 'CHEQUES', '3' => 'VALES', '4' => 'PENSIÓN ALIMENTICIA'], null, [
 				'placeholder' => 'Selecciona...',
 				'class' => 'form-control',
 				'required'

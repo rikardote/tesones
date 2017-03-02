@@ -42,6 +42,10 @@
 			@if($teson->remision_nomina == 3)
 				TARJETAS DE VALES</strong></p>
 			@endif
+
+			@if($teson->remision_nomina == 4)
+				PENSIÓN ALIMENTICIA&nbsp;&nbsp;(CHEQUES)</strong></p>
+			@endif
 <table border="1" class="texto-centrado" style="width:100%";>
 	<tr>
 		<td>TIPO DE PERSONAL: </td>
@@ -58,27 +62,27 @@
 		</td>
 	</tr>
 	<tr>
-		<td>TIPO DE NOMINA: </td>
+		<td>TIPO DE NOMINA:</td>
 		<td>
 			{{ $teson->nomina->nomina }}
 		</td>
-		<td>CLAVE DE ADSCRIPCIÓN: </td>
+		<td>CLAVE DE ADSCRIPCIÓN:</td>
 		<td>{{$user->adscripcion}}</td>
 	</tr>
 	<tr>
-		<td>FOLIOS: </td>
+		<td>FOLIOS:</td>
 		@if($teson->remision_nomina != 3)
 			<td>DEL {{$teson->folio_inicial}} AL {{$teson->folio_final}}</td>
 		@else
 			<td></td>
 		@endif
-		<td>LUGAR: </td>
+		<td>LUGAR:</td>
 		<td>{{$user->lugar}}</td>
 	</tr>
 	<tr>
-		<td>UNIDAD: </td>
+		<td>UNIDAD:</td>
 		<td>{{$user->unidad}}</td>
-		<td>DEPENDENCIA: </td>
+		<td>DEPENDENCIA:</td>
 		<td>DELEGACIÓN ESTATAL B.C.</td>
 	</tr>
 
@@ -86,7 +90,7 @@
 <br>
 <table border="1" style="width:100%" class="texto-centrado">
 	<tr>
-		<td rowspan="2">NÚMERO DE EMPLEADO</td>
+		<td rowspan="2">NÚMERO DE<br>EMPLEADO</td>
 		<td rowspan="2">NOMBRE</td>
 
 		@if($teson->remision_nomina == 1)
