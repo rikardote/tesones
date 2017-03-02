@@ -41,6 +41,10 @@
 							VALES
 					@endif
 
+					@if($teson->remision_nomina == 4)
+							PENSIÓN ALIMENTICIA
+					@endif
+
 				</td>
 					<td>
        		            <a href="{{route('tesones.edit', $teson->id) }}"><span class="fa fa-pencil-square-o fa-2x" aria-hidden='true'></span>

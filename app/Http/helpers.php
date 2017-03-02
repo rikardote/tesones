@@ -1,5 +1,8 @@
 <?php 
+
 use Carbon\Carbon;
+use App\User;
+
 function fecha_ymd($date){
 	return date('Y-m-d', strtotime(str_replace('/', '-', $date)));
 }
@@ -36,6 +39,11 @@ function getMonth($date) {
         return 'DICIEMBRE';
     }
 
+}
+function getUsuario($user_id) {
+      $user = User::find($user_id);
+
+      return $user->adscripcion.' - '.$user->unidad;
 }
 function getDay($date) {
     $dt = Carbon::parse($date);
@@ -93,6 +101,8 @@ function getCancelacion($clave){
       case 81:
         return 'EXTRAVIO';
     }
+  
+
 }
 
 
