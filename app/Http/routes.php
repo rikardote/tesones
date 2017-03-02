@@ -38,6 +38,11 @@ Route::get('tesones/{id}/imprimir', [
         'as' => 'print_teson'
 ]);
 
+Route::get('todas', [
+        'uses' => 'TesonesController@todas',
+        'as' => 'todas.index'
+]);
+
 Route::auth();
 
 Route::get('/', 'TesonesController@index');

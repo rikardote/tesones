@@ -114,5 +114,16 @@ class TesonesController extends Controller
         $mpdf->Output($pdfFilePath, "I"); //D
 
     }
+
+    public function todas()
+    {
+       
+        $tesones = Teson::all();
+        $tesones->each(function($tesones) {
+            $tesones->nomina;
+        });
+
+        return view('admin.todas.index')->with('tesones', $tesones);
+    }
   
 }
