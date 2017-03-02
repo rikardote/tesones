@@ -121,6 +121,7 @@ class TesonesController extends Controller
        
         $tesones = Teson::all();
         $tesones = $tesones->sortByDesc('adscripcion');
+        $tesones->values()->all();
         $tesones->each(function($tesones) {
             $tesones->nomina;
         });
