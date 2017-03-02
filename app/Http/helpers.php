@@ -45,6 +45,14 @@ function getUsuario($user_id) {
 
       return $user->adscripcion.' - '.$user->unidad;
 }
+function getLugar($user_id) {
+      $user = User::find($user_id);
+      return $user->adscripcion;
+}
+function getCreadopor($user_id) {
+      $user = User::find($user_id);
+      return $user->name;
+}
 function getDay($date) {
     $dt = Carbon::parse($date);
     return $dt->day;
@@ -53,6 +61,8 @@ function getYear($date) {
     $dt = Carbon::parse($date);
     return $dt->year;
 }
+
+
 
 function getCancelacion($clave){
   switch ($clave) {
