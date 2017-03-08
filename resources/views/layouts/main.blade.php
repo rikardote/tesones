@@ -27,6 +27,9 @@
     </section>
 </head>
 <body>
+
+</body>
+
  <!-- JavaScripts -->
     <script src="{{ asset('plugins/jquery/js/jquery.js') }}"></script>
     
@@ -43,7 +46,4 @@
       //or if you really want this as a percentage
       document.getElementById("myRow").setAttribute('width', divWidth+'%');//percent
     </script>
-
-
-</body>
 </html>

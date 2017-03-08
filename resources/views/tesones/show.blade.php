@@ -50,11 +50,7 @@
 	<tr>
 		<td>TIPO DE PERSONAL: </td>
 		<td>
-			@if($teson->tipo_personal == 1)
-				FUNCIONARIOS
-			@else
-				OPERATIVOS
-			@endif
+			{{ getFunOp($teson->tipo_personal) }}
 		</td>
 		<td>FECHA DE EMISIÓN: </td>
 		<td>

@@ -25,28 +25,10 @@
 						{{ $teson->nomina->nomina }}
 					</td>
 					<td>
-						@if($teson->tipo_personal == 1)
-							FUNCIONARIOS
-						@else
-							OPERATIVOS
-						@endif
+						{{ getFunOp($teson->tipo_personal) }}
 					</td>
 					<td>
-						@if($teson->remision_nomina == 1)
-							DEBITO
-						@endif
-
-						@if($teson->remision_nomina == 2)
-								CHEQUES
-						@endif
-
-						@if($teson->remision_nomina == 3)
-								VALES
-						@endif
-
-						@if($teson->remision_nomina == 4)
-								PENSIÓN ALIMENTICIA
-						@endif
+						{{ getRemisionNomina($teson->remision_nomina) }}
 					</td>
 					<td>{{ getLugar($teson->user_id) }}</td>
 					<td>{{ getCreadopor($teson->user_id) }}</td>

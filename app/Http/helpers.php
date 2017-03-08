@@ -40,6 +40,34 @@ function getMonth($date) {
     }
 
 }
+function getFunOp($tipo_personal) {
+  switch ($tipo_personal) {
+    case 1:
+      return "FUNCIONARIO";
+      break;
+    case 2:
+      return "OPERATIVO";
+      break;
+  }
+   
+}
+function getRemisionNomina($remision_nomina){
+  switch ($remision_nomina) {
+    case 1:
+      return "DEBITO";
+      break;
+    case 2:
+      return "CHEQUES";
+      break;
+    case 3:
+      return "VALES";
+      break;
+    case 4:
+      return "PENSIÓN ALIMENTICIA";
+      break;
+  }
+  
+}
 function getUsuario($user_id) {
       $user = User::find($user_id);
 

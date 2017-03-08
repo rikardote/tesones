@@ -22,35 +22,16 @@
 					{{ $teson->nomina->nomina }}
 				</td>
 				<td>
-					@if($teson->tipo_personal == 1)
-						FUNCIONARIOS
-					@else
-						OPERATIVOS
-					@endif
+					{{ getFunOp($teson->tipo_personal) }}
 				</td>
 				<td>
-					@if($teson->remision_nomina == 1)
-						DEBITO
-					@endif
-
-					@if($teson->remision_nomina == 2)
-							CHEQUES
-					@endif
-
-					@if($teson->remision_nomina == 3)
-							VALES
-					@endif
-
-					@if($teson->remision_nomina == 4)
-							PENSIÓN ALIMENTICIA
-					@endif
-
+					{{ getRemisionNomina($teson->remision_nomina) }}
 				</td>
-					<td>
-       		            <a href="{{route('tesones.edit', $teson->id) }}"><span class="fa fa-pencil-square-o fa-2x" aria-hidden='true'></span>
-			            </a> 
-			            <a href="{{ route('admin.tesones.destroy', $teson->id) }}" onclick="return confirm('¿Seguro de borrar este Teson?');"><span class="fa fa-trash fa-2x panelColorRed" aria-hidden="true"></span></a>
-			         </td>
+				<td>
+       		        <a href="{{route('tesones.edit', $teson->id) }}"><span class="fa fa-pencil-square-o fa-2x" aria-hidden='true'></span>
+			        </a> 
+			        <a href="{{ route('admin.tesones.destroy', $teson->id) }}" onclick="return confirm('¿Seguro de borrar este Teson?');"><span class="fa fa-trash fa-2x panelColorRed" aria-hidden="true"></span></a>
+			    </td>
 			</tr>
 		@endforeach
 	</tbody>
