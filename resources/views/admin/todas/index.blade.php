@@ -52,7 +52,7 @@
 					<td>{{ getCreadopor($teson->user_id) }}</td>
 					<td>
 	       		     <a href="{{route('tesones.edit', $teson->id) }}"><span class="fa fa-pencil-square-o fa-2x" aria-hidden='true'></span></a> 
-				        <a href="{{ route('admin.tesones.destroy', $teson->id) }}" onclick="return confirm('¿Seguro de borrar este Teson?');"><span class="fa fa-trash fa-2x panelColorRed" aria-hidden="true"></span></a>
+				        <a href="{{ route('teson.borrar', $teson->id) }}" onclick="return confirm('¿Seguro de borrar este Teson?');"><span class="fa fa-trash fa-2x panelColorRed" aria-hidden="true"></span></a>
 				    </td>
 				</tr>
 			@endforeach			

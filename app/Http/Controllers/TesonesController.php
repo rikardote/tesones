@@ -128,5 +128,13 @@ class TesonesController extends Controller
 
         return view('admin.todas.index')->with('tesones', $tesones);
     }
+
+    public function borrar($id){
+        $teson = Teson::find($id);
+        $teson->delete();
+
+        Flash::error('El teson se ha elimiado exitosamente');
+        return redirect()->route('todas.index');
+    }
   
 }
