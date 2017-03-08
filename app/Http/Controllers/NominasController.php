@@ -45,6 +45,7 @@ class NominasController extends Controller
 
 	public function update(Request $request, $id){
     	$nomina = Nomina::find($id);
+        $nomina->fill($request->all());
     	$nomina->fecha_emision = fecha_ymd($request->fecha_emision);
     	$nomina->save();
 
