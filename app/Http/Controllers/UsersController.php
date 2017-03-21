@@ -38,5 +38,13 @@ class UsersController extends Controller
         $users = User::all();
         return view('users.index_all')->with('users', $users); 
     }
+    public function borrar($id)
+    {
+        $user = User::find($id);
+        $user->delete();
+
+        Flash::error('El usuario se ha elimiado exitosamente');
+        return redirect()->route('admin.users_all.index');
+    }
 
 }
