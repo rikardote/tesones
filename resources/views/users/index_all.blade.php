@@ -11,6 +11,7 @@
 					<table class="table table-hover">
 						<thead>
 							<th>Nombre</th>
+							<th>E-mail</th>
 							<th>Adscripción</th>
 							<th>Acciones</th>
 						</thead>
@@ -18,6 +19,7 @@
 							@foreach($users as $user)
 							<tr>
 								<td>{{ $user->name }}</td>
+								<td>{{ $user->email }}</td>
 								<td>{{ $user->adscripcion }}</td>
 								<td>
 				       		        <a href="{{route('usuarios.edit', $user->id) }}"><span class="fa fa-pencil-square-o fa-2x" aria-hidden='true'></span>
