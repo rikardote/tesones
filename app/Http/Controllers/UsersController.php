@@ -35,7 +35,7 @@ class UsersController extends Controller
     }
     public function users_all()
     {
-        $users = User::all()->sort();
+        $users = User::orderBy('adscripcion')->get();
         return view('users.index_all')->with('users', $users); 
     }
     public function borrar($id)
