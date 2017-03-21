@@ -35,7 +35,7 @@ class UsersController extends Controller
     }
     public function users_all()
     {
-        $users = User::all();
+        $users = User::all()->sort();
         return view('users.index_all')->with('users', $users); 
     }
     public function borrar($id)
@@ -43,7 +43,7 @@ class UsersController extends Controller
         $user = User::find($id);
         $user->delete();
 
-        Flash::error('El usuario se ha elimiado exitosamente');
+        Flash::error('El usuario se ha eliminado exitosamente');
         return redirect()->route('admin.users_all.index');
     }
 

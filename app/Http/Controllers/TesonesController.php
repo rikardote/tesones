@@ -75,7 +75,7 @@ class TesonesController extends Controller
         $teson = Teson::find($id);
         $teson->delete();
 
-        Flash::error('El teson se ha elimiado exitosamente');
+        Flash::error('El teson se ha eliminado exitosamente');
         return redirect()->route('tesones.index');
     }
 
