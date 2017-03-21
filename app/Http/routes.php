@@ -17,12 +17,21 @@ Route::get('tesones/{id}/destroy', [
         'uses' => 'TesonesController@destroy',
         'as' => 'admin.tesones.destroy'
 ]);
+
 Route::get('tesones/{id}/borrar', [
         'uses' => 'TesonesController@borrar',
         'as' => 'teson.borrar'
 ]);
 Route::resource('usuarios', 'UsersController');
+Route::get('usuarios/{id}/borrar', [
+        'uses' => 'UsersController@borrar',
+        'as' => 'usuario.destroy'
+]);
 Route::resource('info_nominas', 'NominasController');
+Route::get('users_all/', [
+        'uses' => 'UsersController@users_all',
+        'as' => 'admin.users_all.index'
+]);
 Route::get('info_nominas/{id}/destroy', [
         'uses' => 'NominasController@destroy',
         'as' => 'admin.info_nominas.destroy'

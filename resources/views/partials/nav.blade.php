@@ -37,6 +37,7 @@
                             <ul class="dropdown-menu" role="menu">
                                 <li><a href="{{ url('/usuarios') }}"><i class="fa fa-btn fa-cog"></i> Actualizar Informacion</a></li>
                                  @if(Auth::user()->admin())
+                                    <li><a href="{{ url('/users_all') }}"><i class="fa fa-btn fa-user-o"></i> Modificar Usuarios</a></li>
                                     <li><a href="{{ url('/info_nominas') }}"><i class="fa fa-btn fa-database"></i> Agregar Nominas</a></li>
                                     <li><a href="{{ url('/todas') }}"><i class="fa fa-btn fa-database"></i> Mostrar todos los tesones</a></li>
                                 @endif

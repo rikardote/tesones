@@ -33,5 +33,10 @@ class UsersController extends Controller
         return redirect()->route('usuarios.index');
 
     }
+    public function users_all()
+    {
+        $users = User::all();
+        return view('users.index_all')->with('users', $users); 
+    }
 
 }
