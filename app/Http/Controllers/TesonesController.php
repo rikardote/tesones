@@ -120,11 +120,11 @@ class TesonesController extends Controller
     {
        
         $tesones = Teson::all();
-        $tesones = $tesones->sortByDesc('adscripcion');
-        $tesones->values()->all();
         $tesones->each(function($tesones) {
             $tesones->nomina;
         });
+
+       
 
         return view('admin.todas.index')->with('tesones', $tesones);
     }
