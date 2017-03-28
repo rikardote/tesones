@@ -15,7 +15,7 @@ class Nomina extends Model
     }
 
     public function getFullnominaAttribute() {
-        return 'Fecha de emisión: ' . fecha_dmy($this->fecha_emision) .' - '. $this->nomina;
+        return fecha_dmy($this->fecha_emision) .' - '. $this->nomina;
     }
     
 
