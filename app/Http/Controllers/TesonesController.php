@@ -41,14 +41,14 @@ class TesonesController extends Controller
     }
     public function create()
     {
-        $nominas = Nomina::all()->lists('Fullnomina', 'id')->toArray();
+        $nominas = Nomina::all()->sortby('fecha_emision')->reverse()->lists('Fullnomina', 'id')->toArray();
 
     	return view('tesones.create')->with('nominas', $nominas);
     }
     public function edit($id)
     {
     	$teson = Teson::find($id);
-        $nominas = Nomina::all()->lists('Fullnomina', 'id')->toArray();
+        $nominas = Nomina::all()->sortby('fecha_emision')->reverse()->lists('Fullnomina', 'id')->toArray();
     	return view('tesones.edit')->with('teson', $teson)->with('nominas', $nominas);
     }
     public function store(Request $request)

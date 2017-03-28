@@ -38,6 +38,13 @@ class UsersController extends Controller
         $users = User::orderBy('adscripcion')->get();
         return view('users.index_all')->with('users', $users); 
     }
+
+    public function edit($id)
+    {
+        $user = User::find($id);
+        return view('users.edit')->with('user', $user);
+    }
+
     public function borrar($id)
     {
         $user = User::find($id);
