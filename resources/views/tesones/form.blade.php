@@ -2,7 +2,6 @@
 	<div class="form-group">
 			{!! Form::label('nomina_id', 'Nomina') !!}
 			{!! Form::select('nomina_id', $nominas, null, [
-					'placeholder' => 'Selecciona una nomina.',
 					'class' => 'form-control',
 					'size' => 6,
 					'required'
