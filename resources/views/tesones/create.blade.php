@@ -5,8 +5,8 @@
 @section('content')
 
 	
-	<div class="panel panel-primary">
-		  <div class="panel-heading">Nuevo Teson</div>
+	<div id="app" class="panel panel-primary">
+		<div class="panel-heading">Nuevo Teson</div>
 		<div class="panel-body">
 			{!! Form::open(['route' => 'tesones.store', 'method' => 'POST']) !!}
 				@include('tesones.form')
@@ -33,4 +33,47 @@ $('#datepicker').datepicker({
     }
 });
 </script>
+
+<script src="https://unpkg.com/vue@2.2.6/dist/vue.js"></script>
+
+  <script>
+    var vm = new Vue({
+      el: '#app',
+      data: {
+        v_tipo_pago: '',
+        folio1: '',
+        folio2: ''
+      },
+      computed: {
+        checkFolio: function() {
+          var boton = document.getElementById("boton");
+          boton.disabled = true;
+
+          var folio1 = this.folio1.trim();
+          var folio2 = this.folio2.trim();
+          
+          if(folio2 < folio1) {
+              return "El folio final no puede ser menor al folio inicial";
+          }
+        
+          if (this.v_tipo_pago == 1 && folio1.length == 7 && folio2.length == 7) {
+            boton.disabled = false;
+          }
+
+          if (this.v_tipo_pago == 2 && folio1.length == 6 && folio2.length == 6) {
+            boton.disabled = false;
+          }
+
+          if (this.v_tipo_pago == 3) {
+            boton.disabled = false;
+          }
+
+          if (this.v_tipo_pago == 4 && folio1.length == 6 && folio2.length == 6) {
+            boton.disabled = false;
+          }
+        }
+        
+      }
+    })
+  </script>
 @endsection

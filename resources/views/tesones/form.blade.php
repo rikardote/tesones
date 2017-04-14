@@ -8,15 +8,7 @@
 				]) !!}
 
 	</div>
-	<div class="form-group">
-		{!! Form::label('remision_nomina', 'CHEQUES O DEBITO') !!}
-		{!! Form::select('remision_nomina', ['1' => 'DEBITO', '2' => 'CHEQUES', '3' => 'VALES', '4' => 'PENSIÓN ALIMENTICIA'], null, [
-				'placeholder' => 'Selecciona...',
-				'class' => 'form-control',
-				'required'
-			]) !!}
 
-	</div>
 	<div class="form-group">
 		{!! Form::label('tipo_personal', 'Tipo de personal') !!}
 		{!! Form::select('tipo_personal', ['1' => 'FUNCIONARIOS', '2' => 'OPERATIVOS'], null, [
@@ -26,28 +18,41 @@
 			]) !!}
 		
 	</div>
+
+	<div class="form-group">
+		{!! Form::label('remision_nomina', 'CHEQUES O DEBITO') !!}
+		{!! Form::select('remision_nomina', ['1' => 'DEBITO', '2' => 'CHEQUES', '3' => 'VALES', '4' => 'PENSIÓN ALIMENTICIA'], null, [
+				'placeholder' => 'Selecciona...',
+				'class' => 'form-control',
+				'v-model' => 'v_tipo_pago',
+				'required'
+			]) !!}
+
+	</div>
+
 	<div class="form-group">
 			{!! Form::label('folio_inicial', 'Folio Inicial') !!}
 			{!! Form::number('folio_inicial', null, [
 						'class' => 'form-control',
 						'min' => '1',
-						'required'
+						'v-model' => 'folio1',
+						'required',
 				]) 
 			!!}
-			
 	</div>
+	
 
 	<div class="form-group">
 		{!! Form::label('folio_final', 'Folio Final') !!}
 		{!! Form::number('folio_final', null, [
 				'class' => 'form-control',
+				'v-model' => 'folio2',
 				'min' => '1',
-				'required'
+				'required',
 			]) 
 		!!}
 	</div>
-	
-
+	<p  class="help-block">@{{checkFolio}}</p>
 
 	<div class="form-group">
 				{!! Form::label('observaciones', 'Observaciones') !!}
@@ -58,5 +63,5 @@
 			  ]) !!}
 				
 	</div>
- 	{!! Form::submit('Generar Teson', ['class' => 'btn btn-success btn-block']) !!}
+ 	{!! Form::submit('Generar Teson', ['id' => 'boton', 'class' => 'btn btn-success btn-block','disabled' => 'disabled']) !!}
 </div>

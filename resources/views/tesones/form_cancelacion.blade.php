@@ -19,18 +19,20 @@
 	</div>
 	<div class="form-group">
 		{!! Form::label('numero_cheque', 'Numero de Cheque / Recibo') !!}
-		{!! Form::text('numero_cheque', null, [
+		{!! Form::number('numero_cheque', null, [
 				'placeholder' => 'Ingresa numero de Cheque / Recibo',
 				'class' => 'form-control',
+				'min' => '1',
 				'required'
 			]) !!}
 
 	</div>
 	<div class="form-group">
 		{!! Form::label('importe', 'Importe') !!}
-		{!! Form::text('importe', null, [
+		{!! Form::number('importe', null, [
 				'placeholder' => 'Ingresa el importe',
 				'class' => 'form-control',
+				'min' => '1',
 				'required'
 			]) !!}
 
