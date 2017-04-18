@@ -52,7 +52,7 @@
 			]) 
 		!!}
 	</div>
-	<p  class="help-block">@{{checkFolio}}</p>
+	<h2  class="label label-danger">@{{checkFolio}}</h2>
 
 	<div class="form-group">
 				{!! Form::label('observaciones', 'Observaciones') !!}

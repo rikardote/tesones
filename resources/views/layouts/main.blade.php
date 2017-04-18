@@ -37,6 +37,7 @@
     <script src="{{ asset('plugins/datepicker/js/jquery-ui.js') }}"></script>
     <script src="{{ asset('plugins/datepicker/js/ui.datepicker-es-MX.js') }}"></script>
     <script src="{{ asset('plugins/bootstrap/js/bootstrap.js') }}"></script>
+    <script src="{{ asset('js/vue.js') }}"></script>
     @yield('js')
 
     <script type="text/javascript">

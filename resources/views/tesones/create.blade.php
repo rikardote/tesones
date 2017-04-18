@@ -34,8 +34,6 @@ $('#datepicker').datepicker({
 });
 </script>
 
-<script src="https://unpkg.com/vue@2.2.6/dist/vue.js"></script>
-
   <script>
     var vm = new Vue({
       el: '#app',
@@ -59,9 +57,16 @@ $('#datepicker').datepicker({
           if (this.v_tipo_pago == 1 && folio1.length == 7 && folio2.length == 7) {
             boton.disabled = false;
           }
-
+          if (this.v_tipo_pago == 1 && folio1.length == 6 && folio2.length == 6) {
+            boton.disabled = true;
+            return 'Error debito deben ser 7 Digitos!!';
+          }
           if (this.v_tipo_pago == 2 && folio1.length == 6 && folio2.length == 6) {
             boton.disabled = false;
+          }
+          if (this.v_tipo_pago == 2 && folio1.length == 7 && folio2.length == 7) {
+            boton.disabled = true;
+            return 'Error cheques deben ser 6 Digitos!!';
           }
 
           if (this.v_tipo_pago == 3) {
@@ -70,6 +75,10 @@ $('#datepicker').datepicker({
 
           if (this.v_tipo_pago == 4 && folio1.length == 6 && folio2.length == 6) {
             boton.disabled = false;
+          }
+          if (this.v_tipo_pago == 4 && folio1.length == 7 && folio2.length == 7) {
+            boton.disabled = true;
+            return 'Error cheques deben ser 6 Digitos!!';
           }
         }
         
