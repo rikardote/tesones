@@ -27,6 +27,14 @@ Route::get('usuarios/{id}/borrar', [
         'uses' => 'UsersController@borrar',
         'as' => 'usuario.destroy'
 ]);
+Route::get('usuarios/{id}/password', [
+        'uses' => 'UsersController@edit_password',
+        'as' => 'usuarios.edit.password'
+]);
+Route::patch('usuarios/{id}/password', [
+        'uses' => 'UsersController@update_password',
+        'as' => 'usuarios.update.password'
+]);
 Route::resource('info_nominas', 'NominasController');
 Route::get('users_all/', [
         'uses' => 'UsersController@users_all',

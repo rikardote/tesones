@@ -45,6 +45,22 @@ class UsersController extends Controller
         return view('users.edit')->with('user', $user);
     }
 
+    public function edit_password($id)
+    {
+        $user = User::find($id);
+        return view('users.edit_password')->with('user', $user);
+    }
+
+    public function update_password(Request $request, $id)
+    {
+        $user = User::find($id);
+        $user->password = bcrypt($request->password);
+        $user->save();
+        Flash::info('Contraseña actualizada exitosamente');
+        return redirect()->route('usuarios.index');
+
+    }
+
     public function borrar($id)
     {
         $user = User::find($id);
