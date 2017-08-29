@@ -57,7 +57,7 @@ class UsersController extends Controller
         $user->password = bcrypt($request->password);
         $user->save();
         Flash::info('Contraseña actualizada exitosamente');
-        return redirect()->route('usuarios.index');
+        return redirect()->route('admin.users_all.index');
 
     }
 
