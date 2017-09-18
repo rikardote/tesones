@@ -7,7 +7,7 @@
 		  <div class="panel-heading">Editar Teson</div>
 		<div class="panel-body">
 			{!! Form::model($teson, ['route' => ['tesones.update', $teson->id], 'method' => 'PATCH']) !!}
-				@include('tesones.form')
+				@include('tesones.form_edit')
 	    {!! Form::close() !!}
 		</div>
     </div>
