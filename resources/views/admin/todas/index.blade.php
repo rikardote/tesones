@@ -40,6 +40,6 @@
 			@endforeach			
 		</tbody>
 	</table>
-
+{!! $tesones->render() !!}
 
 @endsection

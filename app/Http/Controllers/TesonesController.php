@@ -119,7 +119,7 @@ class TesonesController extends Controller
     public function todas()
     {
        
-        $tesones = Teson::all();
+        $tesones = Teson::paginate(20);
         $tesones->each(function($tesones) {
             $tesones->nomina;
         });
