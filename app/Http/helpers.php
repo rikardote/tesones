@@ -48,6 +48,9 @@ function getFunOp($tipo_personal) {
     case 2:
       return "OPERATIVO";
       break;
+    case 3:
+      return "HONORARIOS";
+      break;
   }
    
 }
