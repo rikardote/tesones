@@ -155,7 +155,6 @@
 		</td>
 	</tr>
 </table>
-<hr>
 
 <a class="noprint btn btn-info pull pull-left" href="{{route('cancelar.teson', $teson->id) }}">Agregar Cancelaciones</a>
 <a class="noprint btn btn-info pull pull-right" href="{{route('tesones.edit', $teson->id) }}">Modificar Teson</a>
