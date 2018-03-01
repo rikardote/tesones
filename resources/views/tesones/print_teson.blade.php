@@ -106,7 +106,7 @@ table{
 
 		</tr>
 	@endforeach
-	@for($i=$cancelaciones->count(); $i<=14; $i++)
+	@for($i=$cancelaciones->count(); $i<=10; $i++)
 		<tr><td  colspan="6">&nbsp;</td></tr>
 	@endfor
 </table>
