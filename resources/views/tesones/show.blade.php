@@ -84,7 +84,7 @@
 
 </table>
 <br>
-<table border="1" style="width:0%" class="texto-centrado">
+<table border="1" style="width:100%" class="texto-centrado">
 	<tr>
 		<td rowspan="2">NÚMERO DE<br>EMPLEADO</td>
 		<td rowspan="2">NOMBRE</td>
