@@ -16,7 +16,7 @@ table{
 <table width="100%">
 	<tbody>
 		<tr>
-			<td><img alt="" src="../fotos/issste.png" style="width: 400px; height: 108px;" /></td>
+			<td><img alt="" src="../fotos/issste.png" style="width: 300px; height: 108px;" /></td>
 			<td align='right'>
 				<table width="100%" class="table-logo">
 					<tr>
