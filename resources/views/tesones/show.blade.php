@@ -5,7 +5,7 @@
 @section('content')
 	
 
-<table border="0" cellpadding="12" cellspacing="2" style="width:80%;"  STYLE="table-layout:fixed;">
+<table border="0" cellpadding="12" cellspacing="2" style="width:100%;"  STYLE="table-layout:fixed;">
 	<tbody>
 		<tr>
 			<td><img alt="" src="../fotos/issste.png" style="width: 300px; height: 108px;" /></td>
@@ -84,7 +84,7 @@
 
 </table>
 <br>
-<table border="1" style="width:100%" class="texto-centrado">
+<table border="1" style="width:80%" class="texto-centrado">
 	<tr>
 		<td rowspan="2">NÚMERO DE<br>EMPLEADO</td>
 		<td rowspan="2">NOMBRE</td>
