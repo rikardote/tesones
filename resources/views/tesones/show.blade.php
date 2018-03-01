@@ -113,11 +113,11 @@
 
 		</tr>
 	@endforeach
-	@for($i=$cancelaciones->count(); $i<=12; $i++)
+	@for($i=$cancelaciones->count(); $i<=16; $i++)
 		<tr><td style="border:0px"; colspan="6">&nbsp;</td></tr>
 		@if	($i==8 && $cancelaciones->count()==null)
 			<tr><td style="border:0px;font-size:20px;text-shadow: 3px 2px #808080;" colspan="6">&nbsp;PAGADA EN SU TOTALIDAD</td></tr>
-			{{--*/ $i=6 /*--}}
+			{{--*/ $i=9 /*--}}
 		@endif
 	@endfor
 </table>
