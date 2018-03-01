@@ -5,7 +5,7 @@
 @section('content')
 	
 
-<table border="0" cellpadding="12" cellspacing="2" style="width:100%;"  STYLE="table-layout:fixed;">
+<table border="0" cellpadding="12" cellspacing="2" style="width:80%;"  STYLE="table-layout:fixed;">
 	<tbody>
 		<tr>
 			<td><img alt="" src="../fotos/issste.png" style="width: 300px; height: 108px;" /></td>
