@@ -84,7 +84,7 @@
 
 </table>
 <br>
-<table border="1" style="width:80%" class="texto-centrado">
+<table border="1" style="width:0%" class="texto-centrado">
 	<tr>
 		<td rowspan="2">NÚMERO DE<br>EMPLEADO</td>
 		<td rowspan="2">NOMBRE</td>
@@ -115,9 +115,9 @@
 	@endforeach
 	@for($i=$cancelaciones->count(); $i<=16; $i++)
 		<tr><td style="border:0px"; colspan="6">&nbsp;</td></tr>
-		@if	($i==8 && $cancelaciones->count()==null)
+		@if	($i==5 && $cancelaciones->count()==null)
 			<tr><td style="border:0px;font-size:20px;text-shadow: 3px 2px #808080;" colspan="6">&nbsp;PAGADA EN SU TOTALIDAD</td></tr>
-			{{--*/ $i=9 /*--}}
+			{{--*/ $i=6 /*--}}
 		@endif
 	@endfor
 </table>
