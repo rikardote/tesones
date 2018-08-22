@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\User;
+use App\Teson;
 use Laracasts\Flash\Flash;
 
 class UsersController extends Controller
@@ -69,5 +70,13 @@ class UsersController extends Controller
         Flash::error('El usuario se ha eliminado exitosamente');
         return redirect()->route('admin.users_all.index');
     }
+    public function ver_por_usuario($id)
+    {
+        $user = User::find($id);
+        $tesones = Teson::orderBy('nomina_id', 'DESC')->where('user_id', '=', $user->id)->get();
+
+        return view('tesones.ver_por_usuario')->with('tesones',$tesones)->with('user',$user);
+    }
+
 
 }

@@ -79,6 +79,11 @@ Route::get('todas', [
         'as' => 'todas.index'
 ]);
 
+Route::get('users_ver/{id}', [
+        'uses' => 'UsersController@ver_por_usuario',
+        'as' => 'usuario.ver'
+]);
+
 Route::auth();
 
 Route::get('/', 'TesonesController@index');

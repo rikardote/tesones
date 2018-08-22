@@ -26,7 +26,10 @@
 							        </a>
 							        <a href="{{route('usuarios.edit.password', $user->id) }}"><span class="fa fa fa-key fa-2x" aria-hidden='true'></span>
 							        </a>  
+							        <a href="{{route('usuario.ver', $user->id) }}"><span class="fa fa-eye fa-2x" aria-hidden='true'></span>
+							        </a>
 							        <a href="{{ route('usuario.destroy', $user->id) }}" onclick="return confirm('¿Seguro de borrar este Usuario?');"><span class="fa fa-trash fa-2x panelColorRed" aria-hidden="true"></span></a>
+
 							    </td>
 							</tr>
 							@endforeach
