@@ -23,6 +23,7 @@
 				'placeholder' => 'Ingresa numero de Cheque / Recibo',
 				'class' => 'form-control',
 				'min' => '1',
+				'onkeypress' => 'return isNumberKey(event)',
 				'required'
 			]) !!}
 
@@ -33,6 +34,7 @@
 				'placeholder' => 'Ingresa el importe',
 				'class' => 'form-control',
 				'min' => '1',
+				'onkeypress' => 'return isNumberKeyAndDot(event)',
 				'required'
 			]) !!}
 
@@ -70,3 +72,4 @@
 
 	</div>
 </div>
+

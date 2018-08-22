@@ -35,6 +35,7 @@
 			{!! Form::number('folio_inicial', null, [
 						'class' => 'form-control',
 						'min' => '1',
+						'onkeypress' => 'return isNumberKey(event)',
 						'v-model' => 'folio1',
 						'required',
 				]) 
@@ -46,6 +47,7 @@
 		{!! Form::label('folio_final', 'Folio Final') !!}
 		{!! Form::number('folio_final', null, [
 				'class' => 'form-control',
+				'onkeypress' => 'return isNumberKey(event)',
 				'v-model' => 'folio2',
 				'min' => '1',
 				'required',

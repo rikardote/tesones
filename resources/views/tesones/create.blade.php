@@ -16,6 +16,20 @@
 @endsection
 
 @section('js')
+
+<SCRIPT language=Javascript>
+      <!--
+      function isNumberKey(evt)
+      {
+         var charCode = (evt.which) ? evt.which : event.keyCode
+         if (charCode > 31 && (charCode < 48 || charCode > 57))
+            return false;
+
+         return true;
+      }
+      //-->
+ </SCRIPT>
+
 <script type="text/javascript">
   $(function() {
     $( "#datepicker" ).datepicker();

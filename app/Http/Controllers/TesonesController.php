@@ -136,5 +136,25 @@ class TesonesController extends Controller
         Flash::error('El teson se ha elimiado exitosamente');
         return redirect()->route('todas.index');
     }
+    public function borrar_cancelacion($id){
+        $cancelacion = Cancelation::find($id);
+        $cancelacion->delete();
+
+        Flash::error('Cancelacion borrada exitosamente');
+        return redirect()->route('cancelar.teson',[$cancelacion->teson_id]);
+    }
+    public function editar_cancelacion($id){
+        $cancelacion = Cancelation::find($id);
+
+        return view('tesones.cancelaciones_edit')->with('cancelacion', $cancelacion);
+    }
+    public function update_cancelacion(Request $request, $id){
+        $cancelacion = Cancelation::find($id);
+        $cancelacion->fill($request->all());
+
+        $cancelacion->save();
+        Flash::success('Actualizacion exitosa');
+        return redirect()->route('cancelar.teson',[$cancelacion->teson_id]);
+    }
   
 }

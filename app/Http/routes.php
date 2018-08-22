@@ -44,6 +44,8 @@ Route::get('info_nominas/{id}/destroy', [
         'uses' => 'NominasController@destroy',
         'as' => 'admin.info_nominas.destroy'
 ]);
+
+
 Route::resource('cancelaciones', 'CancelacionesController');
 Route::get('cancelar/{teson}', [
         'uses' => 'TesonesController@cancelar',
@@ -53,6 +55,19 @@ Route::post('cancelar/{teson}', [
         'uses' => 'TesonesController@cancelar_store',
         'as' => 'cancelar.teson.store'
 ]);
+Route::get('cancelar/{teson}/edit', [
+        'uses' => 'TesonesController@editar_cancelacion',
+        'as' => 'cancelar.teson.edit'
+]);
+Route::patch('cancelar/{teson}/update', [
+        'uses' => 'TesonesController@update_cancelacion',
+        'as' => 'cancelar.teson.update'
+]);
+Route::get('cancelar/{id}/destroy', [
+        'uses' => 'TesonesController@borrar_cancelacion',
+        'as' => 'cancelar.destroy'
+]);
+
 
 Route::get('tesones/{id}/imprimir', [
         'uses' => 'TesonesController@print_teson',
