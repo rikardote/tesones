@@ -26,8 +26,8 @@
 							<td>{{$cancelacion->numero_cheque}}</td>
 							<td>$ {{number_format($cancelacion->importe,2)}}</td>
 							<td>{{$cancelacion->clave}}</td>
-							<td><a href="{{route('cancelar.teson.edit', $cancelacion->id) }}"><span class="fa fa-pencil-square-o fa-2x" aria-hidden='true'></span>
-			        </a>   <a href="{{route('cancelar.destroy', $cancelacion->id) }}"><span class="fa fa-trash fa-2x" aria-hidden='true'></span></td>
+							<td><a href="{{route('cancelar.teson.edit', $cancelacion->id) }}"><span class="fa fa-pencil-square-o fa-2x" aria-hidden='true'></span></a>   
+			        		<a onclick="return confirm('¿Esta seguro de eliminarlo?')" href="{{route('cancelar.destroy', $cancelacion->id) }}"><span class="fa fa-trash fa-2x" aria-hidden='true'></span></td>
 						</tr>
 					@endforeach
 				</tbody>
