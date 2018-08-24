@@ -1,7 +1,7 @@
 .social {
 	position: fixed; /* Hacemos que la posición en pantalla sea fija para que siempre se muestre en pantalla*/
-	bottom: 40px;
-	right: 20px;
+	bottom: 430px;
+	left: 20px;
 }
 
 	.social ul {
@@ -31,5 +31,5 @@
 
 	.social ul li a:hover {
 		background: #6441A5; /* Cambiamos el fondo cuando el usuario pase el mouse */
-		padding: 10px 30px; /* Hacemos mas grande el espacio cuando el usuario pase el mouse */
+		
 	}

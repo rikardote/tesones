@@ -11,7 +11,7 @@ use App\User;
 use App\Nomina;
 use App\Cancelation;
 use Carbon\Carbon;
-use \mPDF;
+use PDF;
 
 class TesonesController extends Controller
 {
@@ -101,19 +101,10 @@ class TesonesController extends Controller
         $user = User::find($teson->user_id);
         $cancelaciones = Cancelation::where('teson_id', '=', $teson->id)->get();
 
-        $mpdf = new mPDF('', 'Legal-L');
-        //$header = \View('reportes.header_semanal')->with('date', $fecha_inicio)->with('date2', $fecha_final)->render();
-        //$mpdf->SetFooter('Generado el: {DATE j-m-Y}| Programacion de Cirugias | &copy;'.date('Y').' ISSSTE BAJA CALIFORNIA');
-        $html =  \View('tesones.print_teson')->with('teson', $teson)->with('user', $user)->with('cancelaciones', $cancelaciones)->render();
-        $pdfFilePath = 'teson.pdf';
-        $mpdf->setAutoTopMargin = 'stretch';
-        $mpdf->setAutoBottomMargin = 'stretch';
-        //$mpdf->setHTMLHeader($header);
-        $mpdf->SetDisplayMode('fullpage');
-        $mpdf->WriteHTML($html);
-   
-        $mpdf->Output($pdfFilePath, "I"); //D
+        $archivo = 'Tson_emision_del_'.getDay($teson->nomina->fecha_emision).'_'.getMonth($teson->nomina->fecha_emision).'_'.getYear($teson->nomina->fecha_emision).'.pdf';
 
+        $pdf = PDF::loadView('tesones.print_teson',['teson' => $teson, 'user' => $user, 'cancelaciones' => $cancelaciones])->setPaper('letter')->setOrientation('landscape')->setWarnings(false);
+        return $pdf->download($archivo);
     }
 
     public function todas()
@@ -123,9 +114,6 @@ class TesonesController extends Controller
         $tesones->each(function($tesones) {
             $tesones->nomina;
         });
-
-       
-
         return view('admin.todas.index')->with('tesones', $tesones);
     }
 

@@ -4,7 +4,15 @@
 
 @section('content')
 	
-
+<div class="noprint social">
+		<ul>
+			<li><a href="{{route('cancelar.teson', $teson->id) }}" class="icon-pdf"><i class="fa fa-plus fa-1x "> Agregar Cancelaciones</i></a></li>
+			<br>
+			<li><a href="{{route('tesones.edit', $teson->id) }}" class="icon-pdf"><i class="fa fa-pencil-square-o fa-1x "> Modificar TSON</i></a></li>
+			<br>
+			<li><a href="{{route('print_teson', $teson->id) }}" class="icon-pdf"><i class="fa fa-file-pdf-o fa-1x "> Generar PDF</i></a></li>
+		</ul>
+</div>
 <table border="0" cellpadding="12" cellspacing="2" style="width:100%;"  STYLE="table-layout:fixed;">
 	<tbody>
 		<tr>
@@ -156,8 +164,5 @@
 	</tr>
 </table>
 
-
-<a class="noprint btn btn-info pull pull-left" href="{{route('cancelar.teson', $teson->id) }}">Agregar Cancelaciones</a>
-<a class="noprint btn btn-info pull pull-right" href="{{route('tesones.edit', $teson->id) }}">Modificar Teson</a>
 
 @endsection

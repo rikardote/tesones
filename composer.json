@@ -11,7 +11,7 @@
         "laravelcollective/html": "^5.2.0",
         "nesbot/carbon": "~1.21",
         "vsmoraes/laravel-pdf": "^1.0",
-        "mpdf/mpdf": "dev-master@dev"
+        "barryvdh/laravel-dompdf": "0.6.*"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
