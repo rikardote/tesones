@@ -121,12 +121,12 @@ function getCancelacion($clave){
         return 'PAGO IMPROCEDENTE PARCIAL, TRAMITE JURIDICO';
       case 62:
         return 'ERROR DE IMPRESION';
-      case 63:
-        return 'ERROR DE IMPRESION';
       case 64:
+        return 'NO LABORA EN LA UNIDAD';
+      case 63:
         return 'CANCELADO INDEBIDAMENTE';
       case 65:
-        return 'NO LABORAR EN LA UNIDAD';
+        return 'TERMINO DE BECA';
       case 66:
         return 'CAMBIO DE RESIDENCIA (MEDICOS RESIDENTES)';
       case 67:
