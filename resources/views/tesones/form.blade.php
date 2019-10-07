@@ -12,7 +12,7 @@
 	<div class="form-group">
 		{!! Form::label('tipo_personal', 'Tipo de personal') !!}
 		{!! Form::select('tipo_personal', ['1' => 'FUNCIONARIOS', '2' => 'OPERATIVOS', '3' => 'HONORARIOS'], null, [
-				'placeholder' => 'Selecciona tipo de pesonal...',
+				'placeholder' => 'Selecciona tipo de personal...',
 				'class' => 'form-control',
 				'required'
 			]) !!}
