@@ -16,7 +16,7 @@
 <table border="0" cellpadding="12" cellspacing="2" style="width:100%;"  STYLE="table-layout:fixed;">
 	<tbody>
 		<tr>
-			<td><img alt="" src="../fotos/issste.png" style="width: 300px; height: 90px;" /></td>
+			<td><img alt="" src="../fotos/60issste.png" style="width: 300px; height: 65px;" /></td>
 			<td align='right'>
 				<table border="1" style="width:100%;">
 					<tr>

@@ -18,7 +18,7 @@ table, td, th{
 <table border="0" cellpadding="0" cellspacing="0" style="width:100%;">
 	<tbody>
 		<tr>
-			<td><img alt="" src="./fotos/issste.png" style="width: 300px; height: 90px;" /></td>
+			<td><img alt="" src="./fotos/60issste.png" style="width: 300px; height: 65px;" /></td>
 			<td align='right'>(T-SON 19.1)
 				<table border="1" cellpadding="0"  style="width:100%;">
 					<tr>
