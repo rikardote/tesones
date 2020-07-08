@@ -39,12 +39,10 @@
 <p><strong>REMISION DE LA NOMINA DE &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    
 			@if($teson->remision_nomina == 1)
 					DEBITO
-					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     BANCOMER</strong></p>
 			@endif
 
 			@if($teson->remision_nomina == 2)
 					CHEQUES
-			  		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     BANCOMER</strong></p>
 			@endif
 
 			@if($teson->remision_nomina == 3)
