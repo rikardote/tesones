@@ -52,6 +52,12 @@
 			@if($teson->remision_nomina == 4)
 				PENSIÓN ALIMENTICIA&nbsp;&nbsp;(CHEQUES)</strong></p>
 			@endif
+			@if($teson->remision_nomina == 5)
+				F O N A C&nbsp;&nbsp;(DIE)</strong></p>
+			@endif
+			@if($teson->remision_nomina == 6)
+				F O N A C&nbsp;&nbsp;(DEBITO)</strong></p>
+			@endif
 <table border="1" class="texto-centrado" style="width:100%";>
 	<tr>
 		<td>TIPO DE PERSONAL: </td>
