@@ -21,7 +21,7 @@
 
 	<div class="form-group">
 		{!! Form::label('remision_nomina', 'CHEQUES O DEBITO') !!}
-		{!! Form::select('remision_nomina', ['1' => 'DEBITO', '2' => 'CHEQUES', '3' => 'VALES', '4' => 'PENSIÓN ALIMENTICIA'], null, [
+		{!! Form::select('remision_nomina', ['1' => 'DEBITO', '2' => 'CHEQUES', '3' => 'VALES', '4' => 'PENSIÓN ALIMENTICIA', '5' => 'FONAC DIE', '6' => 'FONAC DEBITO'], null, [
 				'placeholder' => 'Selecciona...',
 				'class' => 'form-control',
 				'v-model' => 'v_tipo_pago',
