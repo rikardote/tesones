@@ -83,7 +83,7 @@ $('#datepicker').datepicker({
             return 'Error cheques deben ser 6 Digitos!!';
           }
 
-          if (this.v_tipo_pago == 3) {
+          if (this.v_tipo_pago == 3 || this.v_tipo_pago == 5 || this.v_tipo_pago == 6) {
             boton.disabled = false;
           }
 
