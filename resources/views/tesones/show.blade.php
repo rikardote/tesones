@@ -53,10 +53,10 @@
 				PENSIÓN ALIMENTICIA&nbsp;&nbsp;(CHEQUES)</strong></p>
 			@endif
 			@if($teson->remision_nomina == 5)
-				F O N A C&nbsp;&nbsp;(DIE)</strong></p>
+				F O N A C&nbsp;&nbsp;( D I E )</strong></p>
 			@endif
 			@if($teson->remision_nomina == 6)
-				F O N A C&nbsp;&nbsp;(DEBITO)</strong></p>
+				F O N A C&nbsp;&nbsp;( D E B I T O )</strong></p>
 			@endif
 <table border="1" class="texto-centrado" style="width:100%";>
 	<tr>
@@ -79,7 +79,7 @@
 	</tr>
 	<tr>
 		<td>FOLIOS:</td>
-		@if($teson->remision_nomina != 3 || $teson->remision_nomina != 5 || $teson->remision_nomina != 6)
+		@if($teson->remision_nomina == 3 || $teson->remision_nomina == 5 || $teson->remision_nomina == 6)
 			<td>DEL {{$teson->folio_inicial}} AL {{$teson->folio_final}}</td>
 		@else
 			<td></td>
