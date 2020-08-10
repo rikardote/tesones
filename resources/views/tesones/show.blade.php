@@ -79,7 +79,7 @@
 	</tr>
 	<tr>
 		<td>FOLIOS:</td>
-		@if($teson->remision_nomina != 3)
+		@if($teson->remision_nomina != 3 || $teson->remision_nomina != 5 || $teson->remision_nomina != 6)
 			<td>DEL {{$teson->folio_inicial}} AL {{$teson->folio_final}}</td>
 		@else
 			<td></td>
