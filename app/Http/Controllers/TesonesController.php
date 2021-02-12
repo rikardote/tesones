@@ -65,7 +65,6 @@ class TesonesController extends Controller
     {
     	$teson = Teson::find($id);
     	$teson->fill($request->all());
-        //$teson->fecha_elaboracion = Carbon::today();
         $teson->save();
     	Flash::info('Teson modificado exitosamente');
         return redirect()->route('tesones.show',[$teson->id]);
