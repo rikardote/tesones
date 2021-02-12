@@ -38,7 +38,7 @@
 
 <p><strong>REMISION DE LA NOMINA DE &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    
 			@if($teson->remision_nomina == 1)
-					DEBITO
+					DEBITO BBVA
 			@endif
 
 			@if($teson->remision_nomina == 2)

@@ -27,7 +27,7 @@ class TesonesController extends Controller
         $tesones->each(function($tesones) {
             $tesones->nomina;
         });
-
+        
     	return view('tesones.index')->with('tesones', $tesones)->with('user', $user);
     }
 
