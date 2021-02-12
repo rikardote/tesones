@@ -68,10 +68,10 @@ $('#datepicker').datepicker({
               return "El folio final no puede ser menor al folio inicial";
           }
         
-          if (this.v_tipo_pago == 1 && folio1.length == 7 && folio2.length == 7) {
+          if (this.v_tipo_pago == 1 || this.v_tipo_pago == 7 && folio1.length == 7 && folio2.length == 7) {
             boton.disabled = false;
           }
-          if (this.v_tipo_pago == 1 && folio1.length == 6 && folio2.length == 6) {
+          if (this.v_tipo_pago == 1 || this.v_tipo_pago == 7 && folio1.length == 6 && folio2.length == 6) {
             boton.disabled = true;
             return 'Error debito deben ser 7 Digitos!!';
           }

@@ -46,18 +46,21 @@
 			@endif
 
 			@if($teson->remision_nomina == 3)
-				TARJETAS DE VALES</strong></p>
+				TARJETAS DE VALES
 			@endif
-
 			@if($teson->remision_nomina == 4)
-				PENSIÓN ALIMENTICIA&nbsp;&nbsp;(CHEQUES)</strong></p>
+				PENSIÓN ALIMENTICIA&nbsp;&nbsp;(CHEQUES)
 			@endif
 			@if($teson->remision_nomina == 5)
-				F O N A C&nbsp;&nbsp;( D I E )</strong></p>
+				F O N A C&nbsp;&nbsp;( D I E )
 			@endif
 			@if($teson->remision_nomina == 6)
-				F O N A C&nbsp;&nbsp;( D E B I T O )</strong></p>
+				F O N A C&nbsp;&nbsp;( D E B I T O )
 			@endif
+			@if($teson->remision_nomina == 7)
+				DEBITO SPEI
+			@endif
+</strong></p>
 <table border="1" class="texto-centrado" style="width:100%";>
 	<tr>
 		<td>TIPO DE PERSONAL: </td>

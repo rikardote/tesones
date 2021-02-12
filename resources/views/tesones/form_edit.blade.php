@@ -11,7 +11,7 @@
 
 	<div class="form-group">
 		{!! Form::label('tipo_personal', 'Tipo de personal') !!}
-		{!! Form::select('tipo_personal', ['1' => 'FUNCIONARIOS', '2' => 'OPERATIVOS', '3' => 'HONORARIOS'], null, [
+		{!! Form::select('tipo_personal', ['1' => 'FUNCIONARIOS', '2' => 'OPERATIVOS', '3' => 'HONORARIOS', '4' => 'TEMPORALES'], null, [
 				'placeholder' => 'Selecciona tipo de personal...',
 				'class' => 'form-control',
 				'required'
@@ -21,7 +21,7 @@
 
 	<div class="form-group">
 		{!! Form::label('remision_nomina', 'CHEQUES O DEBITO') !!}
-		{!! Form::select('remision_nomina', ['1' => 'DEBITO', '2' => 'CHEQUES', '3' => 'VALES', '4' => 'PENSIÓN ALIMENTICIA', '5' => 'FONAC DIE', '6' => 'FONAC DEBITO'], null, [
+		{!! Form::select('remision_nomina', ['1' => 'DEBITO BBVA', '7' => 'DEBITO SPEI', 'CHEQUES' ,'2' => 'CHEQUES', '3' => 'VALES', '4' => 'PENSIÓN ALIMENTICIA', '5' => 'FONAC DIE', '6' => 'FONAC DEBITO'], null, [
 				'placeholder' => 'Selecciona...',
 				'class' => 'form-control',
 				'v-model' => 'v_tipo_pago',

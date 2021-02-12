@@ -51,13 +51,16 @@ function getFunOp($tipo_personal) {
     case 3:
       return "HONORARIOS";
       break;
+    case 4:
+      return "TEMPORALES";
+      break;
   }
    
 }
 function getRemisionNomina($remision_nomina){
   switch ($remision_nomina) {
     case 1:
-      return "DEBITO";
+      return "DEBITO BBVA";
       break;
     case 2:
       return "CHEQUES";
@@ -67,6 +70,9 @@ function getRemisionNomina($remision_nomina){
       break;
     case 4:
       return "PENSIÓN ALIMENTICIA";
+      break;
+    case 7:
+      return "DEBITO SPEI";
       break;
   }
   

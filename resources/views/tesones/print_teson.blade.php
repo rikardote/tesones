@@ -39,7 +39,7 @@ table, td, th{
 
 <p><strong>REMISION DE LA NOMINA DE &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    
 			@if($teson->remision_nomina == 1)
-					DEBITO
+					DEBITO BBVA
 			@endif
 
 			@if($teson->remision_nomina == 2)
@@ -58,6 +58,9 @@ table, td, th{
 			@endif
 			@if($teson->remision_nomina == 6)
 				F O N A C&nbsp;&nbsp;(DEBITO)</strong></p>
+			@endif
+			@if($teson->remision_nomina == 7)
+				DEBITO SPEI</strong></p>
 			@endif
 <table border="1" cellpadding="0" cellspacing="0" style="width:100%"; class="texto-centrado">
 	<tr>
