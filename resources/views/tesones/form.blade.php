@@ -20,7 +20,7 @@
 	</div>
 
 	<div class="form-group">
-		{!! Form::label('remision_nomina', 'CHEQUES O DEBITO') !!}
+		{!! Form::label('remision_nomina', 'FORMA DE PAGO') !!}
 		{!! Form::select('remision_nomina', ['1' => 'DEBITO BBVA', '7' => 'DEBITO SPEI', 'CHEQUES', '3' => 'VALES', '4' => 'PENSIÓN ALIMENTICIA', '5' => 'FONAC DIE', '6' => 'FONAC DEBITO'], null, [
 				'placeholder' => 'Selecciona...',
 				'class' => 'form-control',
