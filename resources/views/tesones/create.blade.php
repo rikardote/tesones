@@ -63,12 +63,17 @@ $('#datepicker').datepicker({
 
           var folio1 = this.folio1.trim();
           var folio2 = this.folio2.trim();
-          
+          //v_tipo_pago = 1 BBVA DEBITO
+          //v_tipo_pago = 2 CHEQUES
+          //v_tipo_pago = 7 DEBITO SPEI
           if(folio2 < folio1) {
               return "El folio final no puede ser menor al folio inicial";
           }
 
-
+          if (this.v_tipo_pago == 2 && folio1.length == 6 && folio2.length == 6) {
+            boton.disabled = false;
+            return 'Error cheques deben ser 6 Digitos!!';
+          }
           if (this.v_tipo_pago == 2 && folio1.length == 7 && folio2.length == 7) {
             boton.disabled = true;
             return 'Error cheques deben ser 6 Digitos!!';
